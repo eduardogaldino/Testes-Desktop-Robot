@@ -2,7 +2,7 @@
 Resource        ../../../src/config/main.resource
 
 Suite Setup     Iniciar o sistema   
-
+Suite Teardown  Fechar o sistema 
 
 *** Test Cases ***
 Cenario 01 - Validar o menu Hamburger da Tela Home

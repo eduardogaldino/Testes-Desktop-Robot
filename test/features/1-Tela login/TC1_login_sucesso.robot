@@ -1,7 +1,8 @@
 *** Settings ***
 Resource        ../../../src/config/main.resource
 
-Suite Setup    Iniciar o sistema
+Suite Setup     Iniciar o sistema
+Suite Teardown  Fechar o sistema  
 
 *** Test Cases ***
 
@@ -11,3 +12,5 @@ Cenário 1: Fazer um login de sucesso
     No campo inpuit senha, digite uma senha válida
     Clique no botao Entrar
     Ir para a tela Home
+
+    

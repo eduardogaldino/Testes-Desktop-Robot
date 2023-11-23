@@ -1,4 +1,4 @@
 TIMEOUT:
   MINIMAL:   5
   CURTO:     8
-  DEFAULT:   15
+  DEFAULT:   20

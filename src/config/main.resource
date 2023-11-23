@@ -18,8 +18,9 @@ Resource    ../../src/auto/keywords/telaHome/kws_validar_botao_CONFIRA_tela_home
 Resource    ../../src/auto/keywords/telaHome/kws_Validar_minimizar_menu_hamburger.robot
 Resource    ../../src/auto/keywords/telaHome/kws_validar_maximizar_menu_hamburger.robot
 Resource    ../../src/auto/keywords/telaHome/kws_validar_descansar_mouse_em_incone_menuHamburger.robot
-
+Resource    ../../src/auto/keywords/logout/kws_logoutSucesso.robot
 
 #objects
 Resource     ../../src/auto/objects/telaLogin_obj.resource
-Resource     ../../src/auto/objects/telaHome_obj.resource      
+Resource     ../../src/auto/objects/telaHome_obj.resource 
+Resource     ../../src/auto/objects/logout_obj.resource        

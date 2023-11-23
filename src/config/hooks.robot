@@ -16,4 +16,6 @@ Iniciar o sistema
     Executar sistema SmartPdv
 
 Fechar o sistema
-    Close Application             SmartPdv
+    Capture Screen
+    Clique no botao de logout
+    Clique em sim

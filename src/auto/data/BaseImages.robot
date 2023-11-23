@@ -6,7 +6,8 @@ Resource     ../../config/main.resource
 @{IMAGE_DIR}        
 ...            src\\auto\\images
 ...            src\\auto\\images\\login
-...            src\\auto\\images\\home 
+...            src\\auto\\images\\home
+...            src\\auto\\images\\logout 
 
 *** Keywords ***
 

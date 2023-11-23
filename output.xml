@@ -1,41 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20231122 20:58:16.257" rpa="false" schemaversion="4">
-<suite id="s1" name="TC8 Validar maximizar menu hamburger" source="c:\PROJETOS\TESTES\ROBOT\SmartPOS\test\features\2-Tela home\TC8_Validar_maximizar_menu_hamburger.robot">
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20231123 10:20:16.881" rpa="false" schemaversion="4">
+<suite id="s1" name="Test" source="c:\PROJETOS\TESTES\ROBOT\SmartPOS\test">
+<suite id="s1-s1" name="Features" source="c:\PROJETOS\TESTES\ROBOT\SmartPOS\test\features">
+<suite id="s1-s1-s1" name="1-Tela login" source="c:\PROJETOS\TESTES\ROBOT\SmartPOS\test\features\1-Tela login">
+<suite id="s1-s1-s1-s1" name="TC1 login sucesso" source="c:\PROJETOS\TESTES\ROBOT\SmartPOS\test\features\1-Tela login\TC1_login_sucesso.robot">
 <kw name="Iniciar o sistema" library="hooks" type="SETUP">
 <kw name="Carregar imagens do sistema" library="BaseImages">
 <for flavor="IN">
 <var>${dir}</var>
 <value>@{IMAGE_DIR}</value>
 <iter>
-<var name="${dir}">src//auto//images</var>
+<var name="${dir}">src\auto\images</var>
 <kw name="Add Image Path" library="SikuliLibrary">
 <arg>${dir}</arg>
 <doc>Add image path</doc>
-<status status="PASS" starttime="20231122 20:58:17.904" endtime="20231122 20:58:17.915"/>
+<status status="PASS" starttime="20231123 10:20:18.554" endtime="20231123 10:20:18.565"/>
 </kw>
-<status status="PASS" starttime="20231122 20:58:17.904" endtime="20231122 20:58:17.915"/>
+<status status="PASS" starttime="20231123 10:20:18.554" endtime="20231123 10:20:18.565"/>
 </iter>
 <iter>
 <var name="${dir}">src\auto\images\login</var>
 <kw name="Add Image Path" library="SikuliLibrary">
 <arg>${dir}</arg>
 <doc>Add image path</doc>
-<status status="PASS" starttime="20231122 20:58:17.917" endtime="20231122 20:58:17.919"/>
+<status status="PASS" starttime="20231123 10:20:18.565" endtime="20231123 10:20:18.568"/>
 </kw>
-<status status="PASS" starttime="20231122 20:58:17.915" endtime="20231122 20:58:17.919"/>
+<status status="PASS" starttime="20231123 10:20:18.565" endtime="20231123 10:20:18.568"/>
 </iter>
 <iter>
 <var name="${dir}">src\auto\images\home</var>
 <kw name="Add Image Path" library="SikuliLibrary">
 <arg>${dir}</arg>
 <doc>Add image path</doc>
-<status status="PASS" starttime="20231122 20:58:17.919" endtime="20231122 20:58:17.921"/>
+<status status="PASS" starttime="20231123 10:20:18.568" endtime="20231123 10:20:18.571"/>
 </kw>
-<status status="PASS" starttime="20231122 20:58:17.919" endtime="20231122 20:58:17.921"/>
+<status status="PASS" starttime="20231123 10:20:18.568" endtime="20231123 10:20:18.571"/>
 </iter>
-<status status="PASS" starttime="20231122 20:58:17.904" endtime="20231122 20:58:17.921"/>
+<iter>
+<var name="${dir}">src\auto\images\logout</var>
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>${dir}</arg>
+<doc>Add image path</doc>
+<status status="PASS" starttime="20231123 10:20:18.571" endtime="20231123 10:20:18.574"/>
+</kw>
+<status status="PASS" starttime="20231123 10:20:18.571" endtime="20231123 10:20:18.574"/>
+</iter>
+<status status="PASS" starttime="20231123 10:20:18.553" endtime="20231123 10:20:18.574"/>
 </for>
-<status status="PASS" starttime="20231122 20:58:17.904" endtime="20231122 20:58:17.921"/>
+<status status="PASS" starttime="20231123 10:20:18.553" endtime="20231123 10:20:18.574"/>
 </kw>
 <kw name="Executar sistema SmartPdv" library="hooks">
 <kw name="Open Application" library="SikuliLibrary">
@@ -43,13 +55,273 @@
 <doc>Open application
  To open app with parameters, refer:
  https://sikulix-2014.readthedocs.io/en/latest/appclass.html#App.App</doc>
-<status status="PASS" starttime="20231122 20:58:17.921" endtime="20231122 20:58:19.115"/>
+<status status="PASS" starttime="20231123 10:20:18.574" endtime="20231123 10:20:19.794"/>
 </kw>
-<status status="PASS" starttime="20231122 20:58:17.921" endtime="20231122 20:58:19.115"/>
+<status status="PASS" starttime="20231123 10:20:18.574" endtime="20231123 10:20:19.794"/>
 </kw>
-<status status="PASS" starttime="20231122 20:58:17.903" endtime="20231122 20:58:19.115"/>
+<status status="PASS" starttime="20231123 10:20:18.553" endtime="20231123 10:20:19.794"/>
 </kw>
-<test id="s1-t1" name="Cenário 01 - Validar maximizar o menu hamburger" line="8">
+<test id="s1-s1-s1-s1-t1" name="Cenário 1: Fazer um login de sucesso" line="9">
+<kw name="Estar na tela de Login" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.telaLogin}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:20:20.315" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745620293.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:20:19.795" endtime="20231123 10:20:20.316"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.telaLogin}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:20:20.448" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745620435.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:20:20.316" endtime="20231123 10:20:20.449"/>
+</kw>
+<status status="PASS" starttime="20231123 10:20:19.795" endtime="20231123 10:20:20.449"/>
+</kw>
+<kw name="No campo input email, digite um email válido" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.input_email}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:20:20.565" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745620562.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:20:20.449" endtime="20231123 10:20:20.565"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${option_telaLogin.input_email}</arg>
+<arg>${EMAIL}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20231123 10:20:23.953" level="INFO">Input Text:
+eduardograciebarra@gmail.com</msg>
+<msg timestamp="20231123 10:20:23.953" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745620686.png'/&gt;
+[log] CLICK on L[957,476]@S(0) (556 msec)
+[log]  TYPE "eduardograciebarra@gmail.com"</msg>
+<status status="PASS" starttime="20231123 10:20:20.565" endtime="20231123 10:20:23.954"/>
+</kw>
+<status status="PASS" starttime="20231123 10:20:20.449" endtime="20231123 10:20:23.954"/>
+</kw>
+<kw name="No campo inpuit senha, digite uma senha válida" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.input_password}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:20:24.101" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745624098.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:20:23.954" endtime="20231123 10:20:24.101"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${option_telaLogin.input_password}</arg>
+<arg>${SENHA}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20231123 10:20:25.653" level="INFO">Input Text:
+teste123</msg>
+<msg timestamp="20231123 10:20:25.653" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745624224.png'/&gt;
+[log] CLICK on L[957,558]@S(0) (563 msec)
+[log]  TYPE "teste123"</msg>
+<status status="PASS" starttime="20231123 10:20:24.101" endtime="20231123 10:20:25.653"/>
+</kw>
+<status status="PASS" starttime="20231123 10:20:23.954" endtime="20231123 10:20:25.654"/>
+</kw>
+<kw name="Clique no botao Entrar" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.btn_entrar}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:20:25.783" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745625781.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:20:25.654" endtime="20231123 10:20:25.784"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${option_telaLogin.btn_entrar}</arg>
+<doc>Click</doc>
+<msg timestamp="20231123 10:20:26.545" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745625904.png'/&gt;
+[log] CLICK on L[957,665]@S(0) (558 msec)</msg>
+<status status="PASS" starttime="20231123 10:20:25.784" endtime="20231123 10:20:26.545"/>
+</kw>
+<status status="PASS" starttime="20231123 10:20:25.654" endtime="20231123 10:20:26.546"/>
+</kw>
+<kw name="Ir para a tela Home" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaHome.telaHome}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:20:36.519" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745636427.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:20:26.546" endtime="20231123 10:20:36.519"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaHome.telaHome}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:20:36.788" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745636692.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:20:36.519" endtime="20231123 10:20:36.789"/>
+</kw>
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:20:36.906" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745636817.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:20:36.789" endtime="20231123 10:20:36.906"/>
+</kw>
+<status status="PASS" starttime="20231123 10:20:26.546" endtime="20231123 10:20:36.906"/>
+</kw>
+<status status="PASS" starttime="20231123 10:20:19.794" endtime="20231123 10:20:36.906"/>
+</test>
+<kw name="Fechar o sistema" library="hooks" type="TEARDOWN">
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:20:37.031" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745636941.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:20:36.907" endtime="20231123 10:20:37.032"/>
+</kw>
+<kw name="Clique no botao de logout" library="kws_logoutSucesso">
+<kw name="Ir para a tela Home" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaHome.telaHome}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:20:37.312" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745637221.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:20:37.033" endtime="20231123 10:20:37.312"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaHome.telaHome}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:20:37.577" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745637485.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:20:37.313" endtime="20231123 10:20:37.577"/>
+</kw>
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:20:37.694" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745637608.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:20:37.577" endtime="20231123 10:20:37.694"/>
+</kw>
+<status status="PASS" starttime="20231123 10:20:37.032" endtime="20231123 10:20:37.695"/>
+</kw>
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${options_logout.inc_logout}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:20:37.813" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745637811.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:20:37.695" endtime="20231123 10:20:37.814"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${options_logout.inc_logout}</arg>
+<doc>Click</doc>
+<msg timestamp="20231123 10:20:38.603" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745637938.png'/&gt;
+[log] CLICK on L[148,652]@S(0) (569 msec)</msg>
+<status status="PASS" starttime="20231123 10:20:37.814" endtime="20231123 10:20:38.603"/>
+</kw>
+<status status="PASS" starttime="20231123 10:20:37.032" endtime="20231123 10:20:38.603"/>
+</kw>
+<kw name="Clique em sim" library="kws_logoutSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${options_logout.tela_deseja_realizar_logout}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:20:38.734" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745638729.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:20:38.605" endtime="20231123 10:20:38.735"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${TIMEOUT.MINIMAL}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231123 10:20:43.735" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231123 10:20:38.735" endtime="20231123 10:20:43.735"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${options_logout.btn_sim}</arg>
+<doc>Click</doc>
+<msg timestamp="20231123 10:20:44.533" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745643868.png'/&gt;
+[log] CLICK on L[860,651]@S(0) (565 msec)</msg>
+<status status="PASS" starttime="20231123 10:20:43.735" endtime="20231123 10:20:44.533"/>
+</kw>
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.telaLogin}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:20:45.001" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745644990.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:20:44.534" endtime="20231123 10:20:45.001"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.telaLogin}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:20:45.142" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745645130.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:20:45.001" endtime="20231123 10:20:45.142"/>
+</kw>
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:20:45.220" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745645176.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:20:45.143" endtime="20231123 10:20:45.221"/>
+</kw>
+<status status="PASS" starttime="20231123 10:20:38.603" endtime="20231123 10:20:45.221"/>
+</kw>
+<status status="PASS" starttime="20231123 10:20:36.907" endtime="20231123 10:20:45.221"/>
+</kw>
+<status status="PASS" starttime="20231123 10:20:16.895" endtime="20231123 10:20:45.221"/>
+</suite>
+<status status="PASS" starttime="20231123 10:20:16.894" endtime="20231123 10:20:45.222"/>
+</suite>
+<suite id="s1-s1-s2" name="2-Tela home" source="c:\PROJETOS\TESTES\ROBOT\SmartPOS\test\features\2-Tela home">
+<suite id="s1-s1-s2-s1" name="TC2 Validar Header Tela Home" source="c:\PROJETOS\TESTES\ROBOT\SmartPOS\test\features\2-Tela home\TC2_Validar_Header_Tela_Home.robot">
+<kw name="Iniciar o sistema" library="hooks" type="SETUP">
+<kw name="Carregar imagens do sistema" library="BaseImages">
+<for flavor="IN">
+<var>${dir}</var>
+<value>@{IMAGE_DIR}</value>
+<iter>
+<var name="${dir}">src\auto\images</var>
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>${dir}</arg>
+<doc>Add image path</doc>
+<status status="PASS" starttime="20231123 10:20:45.231" endtime="20231123 10:20:45.234"/>
+</kw>
+<status status="PASS" starttime="20231123 10:20:45.231" endtime="20231123 10:20:45.234"/>
+</iter>
+<iter>
+<var name="${dir}">src\auto\images\login</var>
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>${dir}</arg>
+<doc>Add image path</doc>
+<status status="PASS" starttime="20231123 10:20:45.235" endtime="20231123 10:20:45.237"/>
+</kw>
+<status status="PASS" starttime="20231123 10:20:45.235" endtime="20231123 10:20:45.237"/>
+</iter>
+<iter>
+<var name="${dir}">src\auto\images\home</var>
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>${dir}</arg>
+<doc>Add image path</doc>
+<status status="PASS" starttime="20231123 10:20:45.237" endtime="20231123 10:20:45.239"/>
+</kw>
+<status status="PASS" starttime="20231123 10:20:45.237" endtime="20231123 10:20:45.239"/>
+</iter>
+<iter>
+<var name="${dir}">src\auto\images\logout</var>
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>${dir}</arg>
+<doc>Add image path</doc>
+<status status="PASS" starttime="20231123 10:20:45.239" endtime="20231123 10:20:45.241"/>
+</kw>
+<status status="PASS" starttime="20231123 10:20:45.239" endtime="20231123 10:20:45.241"/>
+</iter>
+<status status="PASS" starttime="20231123 10:20:45.231" endtime="20231123 10:20:45.241"/>
+</for>
+<status status="PASS" starttime="20231123 10:20:45.231" endtime="20231123 10:20:45.241"/>
+</kw>
+<kw name="Executar sistema SmartPdv" library="hooks">
+<kw name="Open Application" library="SikuliLibrary">
+<arg>D://Netpos//SmartPdv//SmartPdv.exe</arg>
+<doc>Open application
+ To open app with parameters, refer:
+ https://sikulix-2014.readthedocs.io/en/latest/appclass.html#App.App</doc>
+<status status="PASS" starttime="20231123 10:20:45.241" endtime="20231123 10:20:45.278"/>
+</kw>
+<status status="PASS" starttime="20231123 10:20:45.241" endtime="20231123 10:20:45.278"/>
+</kw>
+<status status="PASS" starttime="20231123 10:20:45.231" endtime="20231123 10:20:45.278"/>
+</kw>
+<test id="s1-s1-s2-s1-t1" name="Cenario 01 - Validar o Header da Tela Home" line="8">
 <kw name="Logar no sistema smartPOS" library="kws_validar_header_tela_home">
 <kw name="Estar na tela de Login" library="kws_loginSucesso">
 <kw name="Wait Until Screen Contain" library="SikuliLibrary">
@@ -57,18 +329,18 @@
 <arg>${TIMEOUT.DEFAULT}</arg>
 <doc>Wait until screen contain
  Wait until image shown in screen</doc>
-<msg timestamp="20231122 20:58:19.986" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700697499948.png'/&gt;</msg>
-<status status="PASS" starttime="20231122 20:58:19.116" endtime="20231122 20:58:19.987"/>
+<msg timestamp="20231123 10:20:45.424" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745645411.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:20:45.279" endtime="20231123 10:20:45.424"/>
 </kw>
 <kw name="Screen Should Contain" library="SikuliLibrary">
 <arg>${option_telaLogin.telaLogin}</arg>
 <doc>Screen should contain</doc>
-<msg timestamp="20231122 20:58:20.132" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700697500117.png'/&gt;</msg>
-<status status="PASS" starttime="20231122 20:58:19.987" endtime="20231122 20:58:20.133"/>
+<msg timestamp="20231123 10:20:45.563" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745645551.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:20:45.424" endtime="20231123 10:20:45.563"/>
 </kw>
-<status status="PASS" starttime="20231122 20:58:19.116" endtime="20231122 20:58:20.133"/>
+<status status="PASS" starttime="20231123 10:20:45.279" endtime="20231123 10:20:45.563"/>
 </kw>
-<status status="PASS" starttime="20231122 20:58:19.116" endtime="20231122 20:58:20.133"/>
+<status status="PASS" starttime="20231123 10:20:45.279" endtime="20231123 10:20:45.563"/>
 </kw>
 <kw name="No campo input E-mail adicionar o e-mail valido" library="kws_validar_header_tela_home">
 <kw name="No campo input email, digite um email válido" library="kws_loginSucesso">
@@ -77,24 +349,24 @@
 <arg>${TIMEOUT.DEFAULT}</arg>
 <doc>Wait until screen contain
  Wait until image shown in screen</doc>
-<msg timestamp="20231122 20:58:20.245" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700697500243.png'/&gt;</msg>
-<status status="PASS" starttime="20231122 20:58:20.134" endtime="20231122 20:58:20.245"/>
+<msg timestamp="20231123 10:20:45.678" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745645676.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:20:45.563" endtime="20231123 10:20:45.678"/>
 </kw>
 <kw name="Input Text" library="SikuliLibrary">
 <arg>${option_telaLogin.input_email}</arg>
 <arg>${EMAIL}</arg>
 <doc>Input text.
  Image could be empty</doc>
-<msg timestamp="20231122 20:58:23.586" level="INFO">Input Text:
+<msg timestamp="20231123 10:20:49.016" level="INFO">Input Text:
 eduardograciebarra@gmail.com</msg>
-<msg timestamp="20231122 20:58:23.586" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700697500352.png'/&gt;
-[log] CLICK on L[957,476]@S(0) (561 msec)
+<msg timestamp="20231123 10:20:49.016" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745645786.png'/&gt;
+[log] CLICK on L[957,476]@S(0) (560 msec)
 [log]  TYPE "eduardograciebarra@gmail.com"</msg>
-<status status="PASS" starttime="20231122 20:58:20.245" endtime="20231122 20:58:23.586"/>
+<status status="PASS" starttime="20231123 10:20:45.679" endtime="20231123 10:20:49.016"/>
 </kw>
-<status status="PASS" starttime="20231122 20:58:20.133" endtime="20231122 20:58:23.586"/>
+<status status="PASS" starttime="20231123 10:20:45.563" endtime="20231123 10:20:49.016"/>
 </kw>
-<status status="PASS" starttime="20231122 20:58:20.133" endtime="20231122 20:58:23.586"/>
+<status status="PASS" starttime="20231123 10:20:45.563" endtime="20231123 10:20:49.017"/>
 </kw>
 <kw name="No campo input senha digitar uma senha valida" library="kws_validar_header_tela_home">
 <kw name="No campo inpuit senha, digite uma senha válida" library="kws_loginSucesso">
@@ -103,24 +375,24 @@ eduardograciebarra@gmail.com</msg>
 <arg>${TIMEOUT.DEFAULT}</arg>
 <doc>Wait until screen contain
  Wait until image shown in screen</doc>
-<msg timestamp="20231122 20:58:23.731" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700697503728.png'/&gt;</msg>
-<status status="PASS" starttime="20231122 20:58:23.588" endtime="20231122 20:58:23.731"/>
+<msg timestamp="20231123 10:20:49.131" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745649129.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:20:49.017" endtime="20231123 10:20:49.131"/>
 </kw>
 <kw name="Input Text" library="SikuliLibrary">
 <arg>${option_telaLogin.input_password}</arg>
 <arg>${SENHA}</arg>
 <doc>Input text.
  Image could be empty</doc>
-<msg timestamp="20231122 20:58:25.245" level="INFO">Input Text:
+<msg timestamp="20231123 10:20:50.654" level="INFO">Input Text:
 teste123</msg>
-<msg timestamp="20231122 20:58:25.245" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700697503853.png'/&gt;
-[log] CLICK on L[957,558]@S(0) (551 msec)
+<msg timestamp="20231123 10:20:50.654" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745649253.png'/&gt;
+[log] CLICK on L[957,558]@S(0) (561 msec)
 [log]  TYPE "teste123"</msg>
-<status status="PASS" starttime="20231122 20:58:23.732" endtime="20231122 20:58:25.245"/>
+<status status="PASS" starttime="20231123 10:20:49.131" endtime="20231123 10:20:50.654"/>
 </kw>
-<status status="PASS" starttime="20231122 20:58:23.588" endtime="20231122 20:58:25.245"/>
+<status status="PASS" starttime="20231123 10:20:49.017" endtime="20231123 10:20:50.654"/>
 </kw>
-<status status="PASS" starttime="20231122 20:58:23.586" endtime="20231122 20:58:25.245"/>
+<status status="PASS" starttime="20231123 10:20:49.017" endtime="20231123 10:20:50.655"/>
 </kw>
 <kw name="Clique no botão entrar" library="kws_validar_header_tela_home">
 <kw name="Clique no botao Entrar" library="kws_loginSucesso">
@@ -129,19 +401,310 @@ teste123</msg>
 <arg>${TIMEOUT.DEFAULT}</arg>
 <doc>Wait until screen contain
  Wait until image shown in screen</doc>
-<msg timestamp="20231122 20:58:25.360" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700697505357.png'/&gt;</msg>
-<status status="PASS" starttime="20231122 20:58:25.246" endtime="20231122 20:58:25.360"/>
+<msg timestamp="20231123 10:20:50.776" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745650766.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:20:50.655" endtime="20231123 10:20:50.777"/>
 </kw>
 <kw name="Click" library="SikuliLibrary">
 <arg>${option_telaLogin.btn_entrar}</arg>
 <doc>Click</doc>
-<msg timestamp="20231122 20:58:26.116" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700697505464.png'/&gt;
-[log] CLICK on L[957,665]@S(0) (564 msec)</msg>
-<status status="PASS" starttime="20231122 20:58:25.360" endtime="20231122 20:58:26.116"/>
+<msg timestamp="20231123 10:20:51.538" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745650890.png'/&gt;
+[log] CLICK on L[957,665]@S(0) (565 msec)</msg>
+<status status="PASS" starttime="20231123 10:20:50.777" endtime="20231123 10:20:51.538"/>
 </kw>
-<status status="PASS" starttime="20231122 20:58:25.246" endtime="20231122 20:58:26.116"/>
+<status status="PASS" starttime="20231123 10:20:50.655" endtime="20231123 10:20:51.539"/>
 </kw>
-<status status="PASS" starttime="20231122 20:58:25.245" endtime="20231122 20:58:26.116"/>
+<status status="PASS" starttime="20231123 10:20:50.655" endtime="20231123 10:20:51.539"/>
+</kw>
+<kw name="Verifico o header da tela home" library="kws_validar_header_tela_home">
+<kw name="Ir para a tela Home" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaHome.telaHome}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:21:01.124" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745661034.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:20:51.539" endtime="20231123 10:21:01.124"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaHome.telaHome}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:21:01.381" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745661301.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:01.124" endtime="20231123 10:21:01.381"/>
+</kw>
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:21:01.498" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745661411.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:01.381" endtime="20231123 10:21:01.498"/>
+</kw>
+<status status="PASS" starttime="20231123 10:20:51.539" endtime="20231123 10:21:01.498"/>
+</kw>
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaHome.headerHome}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:21:01.587" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745661583.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:01.498" endtime="20231123 10:21:01.587"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaHome.headerHome}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:21:01.681" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745661677.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:01.587" endtime="20231123 10:21:01.681"/>
+</kw>
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:21:01.810" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745661724.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:01.682" endtime="20231123 10:21:01.810"/>
+</kw>
+<status status="PASS" starttime="20231123 10:20:51.539" endtime="20231123 10:21:01.810"/>
+</kw>
+<status status="PASS" starttime="20231123 10:20:45.279" endtime="20231123 10:21:01.811"/>
+</test>
+<kw name="Fechar o sistema" library="hooks" type="TEARDOWN">
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:21:01.937" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745661849.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:01.811" endtime="20231123 10:21:01.937"/>
+</kw>
+<kw name="Clique no botao de logout" library="kws_logoutSucesso">
+<kw name="Ir para a tela Home" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaHome.telaHome}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:21:02.190" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745662098.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:01.938" endtime="20231123 10:21:02.190"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaHome.telaHome}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:21:02.471" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745662380.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:02.190" endtime="20231123 10:21:02.471"/>
+</kw>
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:21:02.593" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745662504.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:02.471" endtime="20231123 10:21:02.593"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:01.937" endtime="20231123 10:21:02.593"/>
+</kw>
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${options_logout.inc_logout}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:21:02.707" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745662705.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:02.594" endtime="20231123 10:21:02.707"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${options_logout.inc_logout}</arg>
+<doc>Click</doc>
+<msg timestamp="20231123 10:21:03.500" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745662832.png'/&gt;
+[log] CLICK on L[148,652]@S(0) (568 msec)</msg>
+<status status="PASS" starttime="20231123 10:21:02.707" endtime="20231123 10:21:03.501"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:01.937" endtime="20231123 10:21:03.501"/>
+</kw>
+<kw name="Clique em sim" library="kws_logoutSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${options_logout.tela_deseja_realizar_logout}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:21:03.624" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745663610.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:03.501" endtime="20231123 10:21:03.624"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${TIMEOUT.MINIMAL}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231123 10:21:08.625" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231123 10:21:03.624" endtime="20231123 10:21:08.625"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${options_logout.btn_sim}</arg>
+<doc>Click</doc>
+<msg timestamp="20231123 10:21:09.414" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745668748.png'/&gt;
+[log] CLICK on L[860,651]@S(0) (559 msec)</msg>
+<status status="PASS" starttime="20231123 10:21:08.625" endtime="20231123 10:21:09.415"/>
+</kw>
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.telaLogin}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:21:09.875" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745669856.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:09.415" endtime="20231123 10:21:09.875"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.telaLogin}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:21:10.008" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745669997.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:09.875" endtime="20231123 10:21:10.008"/>
+</kw>
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:21:10.089" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745670044.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:10.009" endtime="20231123 10:21:10.089"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:03.501" endtime="20231123 10:21:10.089"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:01.811" endtime="20231123 10:21:10.089"/>
+</kw>
+<status status="PASS" starttime="20231123 10:20:45.224" endtime="20231123 10:21:10.089"/>
+</suite>
+<suite id="s1-s1-s2-s2" name="TC3 Validar Menu Hamburger Tela Home" source="c:\PROJETOS\TESTES\ROBOT\SmartPOS\test\features\2-Tela home\TC3_Validar_Menu_Hamburger_Tela_Home.robot">
+<kw name="Iniciar o sistema" library="hooks" type="SETUP">
+<kw name="Carregar imagens do sistema" library="BaseImages">
+<for flavor="IN">
+<var>${dir}</var>
+<value>@{IMAGE_DIR}</value>
+<iter>
+<var name="${dir}">src\auto\images</var>
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>${dir}</arg>
+<doc>Add image path</doc>
+<status status="PASS" starttime="20231123 10:21:10.097" endtime="20231123 10:21:10.099"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:10.097" endtime="20231123 10:21:10.099"/>
+</iter>
+<iter>
+<var name="${dir}">src\auto\images\login</var>
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>${dir}</arg>
+<doc>Add image path</doc>
+<status status="PASS" starttime="20231123 10:21:10.099" endtime="20231123 10:21:10.102"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:10.099" endtime="20231123 10:21:10.102"/>
+</iter>
+<iter>
+<var name="${dir}">src\auto\images\home</var>
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>${dir}</arg>
+<doc>Add image path</doc>
+<status status="PASS" starttime="20231123 10:21:10.102" endtime="20231123 10:21:10.104"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:10.102" endtime="20231123 10:21:10.104"/>
+</iter>
+<iter>
+<var name="${dir}">src\auto\images\logout</var>
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>${dir}</arg>
+<doc>Add image path</doc>
+<status status="PASS" starttime="20231123 10:21:10.105" endtime="20231123 10:21:10.108"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:10.105" endtime="20231123 10:21:10.108"/>
+</iter>
+<status status="PASS" starttime="20231123 10:21:10.096" endtime="20231123 10:21:10.108"/>
+</for>
+<status status="PASS" starttime="20231123 10:21:10.096" endtime="20231123 10:21:10.108"/>
+</kw>
+<kw name="Executar sistema SmartPdv" library="hooks">
+<kw name="Open Application" library="SikuliLibrary">
+<arg>D://Netpos//SmartPdv//SmartPdv.exe</arg>
+<doc>Open application
+ To open app with parameters, refer:
+ https://sikulix-2014.readthedocs.io/en/latest/appclass.html#App.App</doc>
+<status status="PASS" starttime="20231123 10:21:10.108" endtime="20231123 10:21:10.147"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:10.108" endtime="20231123 10:21:10.147"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:10.096" endtime="20231123 10:21:10.147"/>
+</kw>
+<test id="s1-s1-s2-s2-t1" name="Cenario 01 - Validar o menu Hamburger da Tela Home" line="8">
+<kw name="Logar no sistema smartPOS" library="kws_validar_header_tela_home">
+<kw name="Estar na tela de Login" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.telaLogin}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:21:10.297" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745670277.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:10.148" endtime="20231123 10:21:10.297"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.telaLogin}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:21:10.431" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745670419.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:10.297" endtime="20231123 10:21:10.431"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:10.148" endtime="20231123 10:21:10.431"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:10.148" endtime="20231123 10:21:10.431"/>
+</kw>
+<kw name="No campo input E-mail adicionar o e-mail valido" library="kws_validar_header_tela_home">
+<kw name="No campo input email, digite um email válido" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.input_email}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:21:10.547" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745670545.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:10.432" endtime="20231123 10:21:10.547"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${option_telaLogin.input_email}</arg>
+<arg>${EMAIL}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20231123 10:21:13.851" level="INFO">Input Text:
+eduardograciebarra@gmail.com</msg>
+<msg timestamp="20231123 10:21:13.851" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745670655.png'/&gt;
+[log] CLICK on L[957,476]@S(0) (554 msec)
+[log]  TYPE "eduardograciebarra@gmail.com"</msg>
+<status status="PASS" starttime="20231123 10:21:10.548" endtime="20231123 10:21:13.851"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:10.432" endtime="20231123 10:21:13.851"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:10.431" endtime="20231123 10:21:13.851"/>
+</kw>
+<kw name="No campo input senha digitar uma senha valida" library="kws_validar_header_tela_home">
+<kw name="No campo inpuit senha, digite uma senha válida" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.input_password}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:21:13.973" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745673962.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:13.853" endtime="20231123 10:21:13.973"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${option_telaLogin.input_password}</arg>
+<arg>${SENHA}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20231123 10:21:15.459" level="INFO">Input Text:
+teste123</msg>
+<msg timestamp="20231123 10:21:15.459" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745674088.png'/&gt;
+[log] CLICK on L[957,558]@S(0) (559 msec)
+[log]  TYPE "teste123"</msg>
+<status status="PASS" starttime="20231123 10:21:13.973" endtime="20231123 10:21:15.459"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:13.851" endtime="20231123 10:21:15.459"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:13.851" endtime="20231123 10:21:15.459"/>
+</kw>
+<kw name="Clique no botão entrar" library="kws_validar_header_tela_home">
+<kw name="Clique no botao Entrar" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.btn_entrar}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:21:15.583" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745675572.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:15.460" endtime="20231123 10:21:15.583"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${option_telaLogin.btn_entrar}</arg>
+<doc>Click</doc>
+<msg timestamp="20231123 10:21:16.354" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745675699.png'/&gt;
+[log] CLICK on L[957,665]@S(0) (566 msec)</msg>
+<status status="PASS" starttime="20231123 10:21:15.583" endtime="20231123 10:21:16.354"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:15.460" endtime="20231123 10:21:16.354"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:15.460" endtime="20231123 10:21:16.354"/>
 </kw>
 <kw name="Verifico o menu hamburger da tela home" library="kws_validar_menu_hamburger_tela_home">
 <kw name="Ir para a tela Home" library="kws_loginSucesso">
@@ -150,42 +713,1659 @@ teste123</msg>
 <arg>${TIMEOUT.DEFAULT}</arg>
 <doc>Wait until screen contain
  Wait until image shown in screen</doc>
-<msg timestamp="20231122 20:58:39.438" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700697519356.png'/&gt;</msg>
-<status status="PASS" starttime="20231122 20:58:26.117" endtime="20231122 20:58:39.438"/>
+<msg timestamp="20231123 10:21:25.603" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745685521.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:16.355" endtime="20231123 10:21:25.603"/>
 </kw>
 <kw name="Screen Should Contain" library="SikuliLibrary">
 <arg>${option_telaHome.telaHome}</arg>
 <doc>Screen should contain</doc>
-<msg timestamp="20231122 20:58:39.713" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700697519622.png'/&gt;</msg>
-<status status="PASS" starttime="20231122 20:58:39.438" endtime="20231122 20:58:39.713"/>
+<msg timestamp="20231123 10:21:25.867" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745685785.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:25.603" endtime="20231123 10:21:25.867"/>
 </kw>
 <kw name="Capture Screen" library="SikuliLibrary">
 <doc>Capture whole screen, file name is returned</doc>
-<msg timestamp="20231122 20:58:39.838" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700697519748.png'/&gt;</msg>
-<status status="PASS" starttime="20231122 20:58:39.713" endtime="20231122 20:58:39.838"/>
+<msg timestamp="20231123 10:21:25.979" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745685894.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:25.867" endtime="20231123 10:21:25.980"/>
 </kw>
-<status status="PASS" starttime="20231122 20:58:26.116" endtime="20231122 20:58:39.838"/>
+<status status="PASS" starttime="20231123 10:21:16.354" endtime="20231123 10:21:25.980"/>
 </kw>
 <kw name="Wait Until Screen Contain" library="SikuliLibrary">
 <arg>${option_telaHome.menuHamburger}</arg>
 <arg>${TIMEOUT.DEFAULT}</arg>
 <doc>Wait until screen contain
  Wait until image shown in screen</doc>
-<msg timestamp="20231122 20:58:39.988" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700697519981.png'/&gt;</msg>
-<status status="PASS" starttime="20231122 20:58:39.838" endtime="20231122 20:58:39.989"/>
+<msg timestamp="20231123 10:21:26.116" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745686110.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:25.980" endtime="20231123 10:21:26.117"/>
 </kw>
 <kw name="Screen Should Contain" library="SikuliLibrary">
 <arg>${option_telaHome.menuHamburger}</arg>
 <doc>Screen should contain</doc>
-<msg timestamp="20231122 20:58:40.129" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700697520121.png'/&gt;</msg>
-<status status="PASS" starttime="20231122 20:58:39.989" endtime="20231122 20:58:40.129"/>
+<msg timestamp="20231123 10:21:26.240" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745686234.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:26.117" endtime="20231123 10:21:26.240"/>
 </kw>
 <kw name="Capture Screen" library="SikuliLibrary">
 <doc>Capture whole screen, file name is returned</doc>
-<msg timestamp="20231122 20:58:40.263" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700697520168.png'/&gt;</msg>
-<status status="PASS" starttime="20231122 20:58:40.130" endtime="20231122 20:58:40.263"/>
+<msg timestamp="20231123 10:21:26.365" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745686280.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:26.240" endtime="20231123 10:21:26.366"/>
 </kw>
-<status status="PASS" starttime="20231122 20:58:26.116" endtime="20231122 20:58:40.263"/>
+<status status="PASS" starttime="20231123 10:21:16.354" endtime="20231123 10:21:26.366"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:10.148" endtime="20231123 10:21:26.366"/>
+</test>
+<kw name="Fechar o sistema" library="hooks" type="TEARDOWN">
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:21:26.490" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745686404.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:26.367" endtime="20231123 10:21:26.490"/>
+</kw>
+<kw name="Clique no botao de logout" library="kws_logoutSucesso">
+<kw name="Ir para a tela Home" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaHome.telaHome}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:21:26.760" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745686669.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:26.490" endtime="20231123 10:21:26.760"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaHome.telaHome}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:21:27.023" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745686932.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:26.760" endtime="20231123 10:21:27.023"/>
+</kw>
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:21:27.144" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745687058.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:27.023" endtime="20231123 10:21:27.144"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:26.490" endtime="20231123 10:21:27.144"/>
+</kw>
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${options_logout.inc_logout}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:21:27.261" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745687260.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:27.144" endtime="20231123 10:21:27.261"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${options_logout.inc_logout}</arg>
+<doc>Click</doc>
+<msg timestamp="20231123 10:21:28.038" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745687383.png'/&gt;
+[log] CLICK on L[148,652]@S(0) (560 msec)</msg>
+<status status="PASS" starttime="20231123 10:21:27.261" endtime="20231123 10:21:28.039"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:26.490" endtime="20231123 10:21:28.039"/>
+</kw>
+<kw name="Clique em sim" library="kws_logoutSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${options_logout.tela_deseja_realizar_logout}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:21:28.178" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745688164.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:28.039" endtime="20231123 10:21:28.179"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${TIMEOUT.MINIMAL}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231123 10:21:33.179" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231123 10:21:28.179" endtime="20231123 10:21:33.179"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${options_logout.btn_sim}</arg>
+<doc>Click</doc>
+<msg timestamp="20231123 10:21:33.973" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745693306.png'/&gt;
+[log] CLICK on L[860,651]@S(0) (562 msec)</msg>
+<status status="PASS" starttime="20231123 10:21:33.179" endtime="20231123 10:21:33.973"/>
+</kw>
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.telaLogin}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:21:34.433" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745694411.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:33.973" endtime="20231123 10:21:34.434"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.telaLogin}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:21:34.575" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745694564.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:34.434" endtime="20231123 10:21:34.575"/>
+</kw>
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:21:34.654" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745694610.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:34.575" endtime="20231123 10:21:34.654"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:28.039" endtime="20231123 10:21:34.654"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:26.367" endtime="20231123 10:21:34.654"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:10.090" endtime="20231123 10:21:34.654"/>
+</suite>
+<suite id="s1-s1-s2-s3" name="TC4 Validar Banner Tela Home" source="c:\PROJETOS\TESTES\ROBOT\SmartPOS\test\features\2-Tela home\TC4_Validar_Banner_Tela_Home.robot">
+<kw name="Iniciar o sistema" library="hooks" type="SETUP">
+<kw name="Carregar imagens do sistema" library="BaseImages">
+<for flavor="IN">
+<var>${dir}</var>
+<value>@{IMAGE_DIR}</value>
+<iter>
+<var name="${dir}">src\auto\images</var>
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>${dir}</arg>
+<doc>Add image path</doc>
+<status status="PASS" starttime="20231123 10:21:34.662" endtime="20231123 10:21:34.664"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:34.662" endtime="20231123 10:21:34.664"/>
+</iter>
+<iter>
+<var name="${dir}">src\auto\images\login</var>
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>${dir}</arg>
+<doc>Add image path</doc>
+<status status="PASS" starttime="20231123 10:21:34.665" endtime="20231123 10:21:34.667"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:34.665" endtime="20231123 10:21:34.667"/>
+</iter>
+<iter>
+<var name="${dir}">src\auto\images\home</var>
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>${dir}</arg>
+<doc>Add image path</doc>
+<status status="PASS" starttime="20231123 10:21:34.667" endtime="20231123 10:21:34.669"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:34.667" endtime="20231123 10:21:34.669"/>
+</iter>
+<iter>
+<var name="${dir}">src\auto\images\logout</var>
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>${dir}</arg>
+<doc>Add image path</doc>
+<status status="PASS" starttime="20231123 10:21:34.669" endtime="20231123 10:21:34.671"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:34.669" endtime="20231123 10:21:34.671"/>
+</iter>
+<status status="PASS" starttime="20231123 10:21:34.662" endtime="20231123 10:21:34.671"/>
+</for>
+<status status="PASS" starttime="20231123 10:21:34.662" endtime="20231123 10:21:34.671"/>
+</kw>
+<kw name="Executar sistema SmartPdv" library="hooks">
+<kw name="Open Application" library="SikuliLibrary">
+<arg>D://Netpos//SmartPdv//SmartPdv.exe</arg>
+<doc>Open application
+ To open app with parameters, refer:
+ https://sikulix-2014.readthedocs.io/en/latest/appclass.html#App.App</doc>
+<status status="PASS" starttime="20231123 10:21:34.671" endtime="20231123 10:21:34.703"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:34.671" endtime="20231123 10:21:34.703"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:34.662" endtime="20231123 10:21:34.703"/>
+</kw>
+<test id="s1-s1-s2-s3-t1" name="Cenário 01 - Validar Banner da Tela Home" line="8">
+<kw name="Logar no sistema smartPOS" library="kws_validar_header_tela_home">
+<kw name="Estar na tela de Login" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.telaLogin}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:21:34.843" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745694832.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:34.705" endtime="20231123 10:21:34.843"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.telaLogin}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:21:34.986" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745694974.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:34.843" endtime="20231123 10:21:34.986"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:34.705" endtime="20231123 10:21:34.986"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:34.705" endtime="20231123 10:21:34.986"/>
+</kw>
+<kw name="No campo input E-mail adicionar o e-mail valido" library="kws_validar_header_tela_home">
+<kw name="No campo input email, digite um email válido" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.input_email}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:21:35.101" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745695099.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:34.987" endtime="20231123 10:21:35.102"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${option_telaLogin.input_email}</arg>
+<arg>${EMAIL}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20231123 10:21:38.496" level="INFO">Input Text:
+eduardograciebarra@gmail.com</msg>
+<msg timestamp="20231123 10:21:38.496" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745695208.png'/&gt;
+[log] CLICK on L[957,476]@S(0) (565 msec)
+[log]  TYPE "eduardograciebarra@gmail.com"</msg>
+<status status="PASS" starttime="20231123 10:21:35.102" endtime="20231123 10:21:38.496"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:34.987" endtime="20231123 10:21:38.496"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:34.987" endtime="20231123 10:21:38.496"/>
+</kw>
+<kw name="No campo input senha digitar uma senha valida" library="kws_validar_header_tela_home">
+<kw name="No campo inpuit senha, digite uma senha válida" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.input_password}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:21:38.633" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745698622.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:38.497" endtime="20231123 10:21:38.633"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${option_telaLogin.input_password}</arg>
+<arg>${SENHA}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20231123 10:21:40.153" level="INFO">Input Text:
+teste123</msg>
+<msg timestamp="20231123 10:21:40.153" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745698746.png'/&gt;
+[log] CLICK on L[957,558]@S(0) (563 msec)
+[log]  TYPE "teste123"</msg>
+<status status="PASS" starttime="20231123 10:21:38.633" endtime="20231123 10:21:40.153"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:38.497" endtime="20231123 10:21:40.153"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:38.497" endtime="20231123 10:21:40.153"/>
+</kw>
+<kw name="Clique no botão entrar" library="kws_validar_header_tela_home">
+<kw name="Clique no botao Entrar" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.btn_entrar}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:21:40.276" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745700266.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:40.154" endtime="20231123 10:21:40.277"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${option_telaLogin.btn_entrar}</arg>
+<doc>Click</doc>
+<msg timestamp="20231123 10:21:41.027" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745700391.png'/&gt;
+[log] CLICK on L[957,665]@S(0) (553 msec)</msg>
+<status status="PASS" starttime="20231123 10:21:40.277" endtime="20231123 10:21:41.027"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:40.154" endtime="20231123 10:21:41.027"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:40.153" endtime="20231123 10:21:41.027"/>
+</kw>
+<kw name="Verifico o banner da tela home" library="kws_validar_banner_tela_home">
+<kw name="Ir para a tela Home" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaHome.telaHome}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:21:50.250" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745710161.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:41.028" endtime="20231123 10:21:50.250"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaHome.telaHome}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:21:50.506" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745710425.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:50.250" endtime="20231123 10:21:50.507"/>
+</kw>
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:21:50.620" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745710534.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:50.507" endtime="20231123 10:21:50.620"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:41.028" endtime="20231123 10:21:50.620"/>
+</kw>
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaHome.banner}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:21:50.743" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745710740.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:50.620" endtime="20231123 10:21:50.744"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaHome.banner}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:21:50.868" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745710864.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:50.744" endtime="20231123 10:21:50.868"/>
+</kw>
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:21:50.982" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745710896.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:50.868" endtime="20231123 10:21:50.982"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:41.028" endtime="20231123 10:21:50.982"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:34.703" endtime="20231123 10:21:50.983"/>
+</test>
+<kw name="Fechar o sistema" library="hooks" type="TEARDOWN">
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:21:51.107" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745711020.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:50.983" endtime="20231123 10:21:51.107"/>
+</kw>
+<kw name="Clique no botao de logout" library="kws_logoutSucesso">
+<kw name="Ir para a tela Home" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaHome.telaHome}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:21:51.364" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745711273.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:51.108" endtime="20231123 10:21:51.364"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaHome.telaHome}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:21:51.628" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745711538.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:51.364" endtime="20231123 10:21:51.628"/>
+</kw>
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:21:51.751" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745711663.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:51.628" endtime="20231123 10:21:51.751"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:51.107" endtime="20231123 10:21:51.751"/>
+</kw>
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${options_logout.inc_logout}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:21:51.867" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745711865.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:51.751" endtime="20231123 10:21:51.868"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${options_logout.inc_logout}</arg>
+<doc>Click</doc>
+<msg timestamp="20231123 10:21:52.664" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745711992.png'/&gt;
+[log] CLICK on L[148,652]@S(0) (574 msec)</msg>
+<status status="PASS" starttime="20231123 10:21:51.868" endtime="20231123 10:21:52.665"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:51.107" endtime="20231123 10:21:52.665"/>
+</kw>
+<kw name="Clique em sim" library="kws_logoutSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${options_logout.tela_deseja_realizar_logout}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:21:52.801" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745712788.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:52.665" endtime="20231123 10:21:52.801"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${TIMEOUT.MINIMAL}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231123 10:21:57.803" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231123 10:21:52.801" endtime="20231123 10:21:57.803"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${options_logout.btn_sim}</arg>
+<doc>Click</doc>
+<msg timestamp="20231123 10:21:58.575" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745717920.png'/&gt;
+[log] CLICK on L[860,651]@S(0) (557 msec)</msg>
+<status status="PASS" starttime="20231123 10:21:57.803" endtime="20231123 10:21:58.575"/>
+</kw>
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.telaLogin}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:21:59.051" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745719032.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:58.575" endtime="20231123 10:21:59.052"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.telaLogin}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:21:59.183" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745719172.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:59.052" endtime="20231123 10:21:59.183"/>
+</kw>
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:21:59.261" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745719219.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:59.184" endtime="20231123 10:21:59.263"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:52.665" endtime="20231123 10:21:59.263"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:50.983" endtime="20231123 10:21:59.263"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:34.655" endtime="20231123 10:21:59.263"/>
+</suite>
+<suite id="s1-s1-s2-s4" name="TC5 validar botao AGORA NAO Tela Home" source="c:\PROJETOS\TESTES\ROBOT\SmartPOS\test\features\2-Tela home\TC5_validar_botao_AGORA_NAO_Tela_Home.robot">
+<kw name="Iniciar o sistema" library="hooks" type="SETUP">
+<kw name="Carregar imagens do sistema" library="BaseImages">
+<for flavor="IN">
+<var>${dir}</var>
+<value>@{IMAGE_DIR}</value>
+<iter>
+<var name="${dir}">src\auto\images</var>
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>${dir}</arg>
+<doc>Add image path</doc>
+<status status="PASS" starttime="20231123 10:21:59.271" endtime="20231123 10:21:59.274"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:59.271" endtime="20231123 10:21:59.274"/>
+</iter>
+<iter>
+<var name="${dir}">src\auto\images\login</var>
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>${dir}</arg>
+<doc>Add image path</doc>
+<status status="PASS" starttime="20231123 10:21:59.274" endtime="20231123 10:21:59.277"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:59.274" endtime="20231123 10:21:59.277"/>
+</iter>
+<iter>
+<var name="${dir}">src\auto\images\home</var>
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>${dir}</arg>
+<doc>Add image path</doc>
+<status status="PASS" starttime="20231123 10:21:59.277" endtime="20231123 10:21:59.279"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:59.277" endtime="20231123 10:21:59.279"/>
+</iter>
+<iter>
+<var name="${dir}">src\auto\images\logout</var>
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>${dir}</arg>
+<doc>Add image path</doc>
+<status status="PASS" starttime="20231123 10:21:59.279" endtime="20231123 10:21:59.281"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:59.279" endtime="20231123 10:21:59.281"/>
+</iter>
+<status status="PASS" starttime="20231123 10:21:59.271" endtime="20231123 10:21:59.283"/>
+</for>
+<status status="PASS" starttime="20231123 10:21:59.271" endtime="20231123 10:21:59.283"/>
+</kw>
+<kw name="Executar sistema SmartPdv" library="hooks">
+<kw name="Open Application" library="SikuliLibrary">
+<arg>D://Netpos//SmartPdv//SmartPdv.exe</arg>
+<doc>Open application
+ To open app with parameters, refer:
+ https://sikulix-2014.readthedocs.io/en/latest/appclass.html#App.App</doc>
+<status status="PASS" starttime="20231123 10:21:59.283" endtime="20231123 10:21:59.317"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:59.283" endtime="20231123 10:21:59.317"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:59.271" endtime="20231123 10:21:59.317"/>
+</kw>
+<test id="s1-s1-s2-s4-t1" name="Cenário 01 - Validar botâo AGORA NAO do banner da tela home" line="8">
+<kw name="Logar no sistema smartPOS" library="kws_validar_header_tela_home">
+<kw name="Estar na tela de Login" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.telaLogin}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:21:59.449" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745719438.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:59.318" endtime="20231123 10:21:59.449"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.telaLogin}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:21:59.589" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745719578.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:59.450" endtime="20231123 10:21:59.589"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:59.317" endtime="20231123 10:21:59.591"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:59.317" endtime="20231123 10:21:59.591"/>
+</kw>
+<kw name="No campo input E-mail adicionar o e-mail valido" library="kws_validar_header_tela_home">
+<kw name="No campo input email, digite um email válido" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.input_email}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:21:59.706" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745719703.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:21:59.591" endtime="20231123 10:21:59.706"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${option_telaLogin.input_email}</arg>
+<arg>${EMAIL}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20231123 10:22:03.011" level="INFO">Input Text:
+eduardograciebarra@gmail.com</msg>
+<msg timestamp="20231123 10:22:03.011" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745719813.png'/&gt;
+[log] CLICK on L[957,476]@S(0) (551 msec)
+[log]  TYPE "eduardograciebarra@gmail.com"</msg>
+<status status="PASS" starttime="20231123 10:21:59.706" endtime="20231123 10:22:03.011"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:59.591" endtime="20231123 10:22:03.012"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:59.591" endtime="20231123 10:22:03.012"/>
+</kw>
+<kw name="No campo input senha digitar uma senha valida" library="kws_validar_header_tela_home">
+<kw name="No campo inpuit senha, digite uma senha válida" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.input_password}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:22:03.149" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745723139.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:22:03.012" endtime="20231123 10:22:03.149"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${option_telaLogin.input_password}</arg>
+<arg>${SENHA}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20231123 10:22:04.666" level="INFO">Input Text:
+teste123</msg>
+<msg timestamp="20231123 10:22:04.666" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745723264.png'/&gt;
+[log] CLICK on L[957,558]@S(0) (556 msec)
+[log]  TYPE "teste123"</msg>
+<status status="PASS" starttime="20231123 10:22:03.149" endtime="20231123 10:22:04.666"/>
+</kw>
+<status status="PASS" starttime="20231123 10:22:03.012" endtime="20231123 10:22:04.666"/>
+</kw>
+<status status="PASS" starttime="20231123 10:22:03.012" endtime="20231123 10:22:04.666"/>
+</kw>
+<kw name="Clique no botão entrar" library="kws_validar_header_tela_home">
+<kw name="Clique no botao Entrar" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.btn_entrar}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:22:04.791" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745724780.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:22:04.668" endtime="20231123 10:22:04.791"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${option_telaLogin.btn_entrar}</arg>
+<doc>Click</doc>
+<msg timestamp="20231123 10:22:05.541" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745724904.png'/&gt;
+[log] CLICK on L[957,665]@S(0) (552 msec)</msg>
+<status status="PASS" starttime="20231123 10:22:04.791" endtime="20231123 10:22:05.541"/>
+</kw>
+<status status="PASS" starttime="20231123 10:22:04.668" endtime="20231123 10:22:05.541"/>
+</kw>
+<status status="PASS" starttime="20231123 10:22:04.666" endtime="20231123 10:22:05.541"/>
+</kw>
+<kw name="Verifico o banner da tela home" library="kws_validar_banner_tela_home">
+<kw name="Ir para a tela Home" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaHome.telaHome}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:22:14.822" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745734732.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:22:05.541" endtime="20231123 10:22:14.823"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaHome.telaHome}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:22:15.083" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745735001.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:22:14.823" endtime="20231123 10:22:15.083"/>
+</kw>
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:22:15.211" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745735124.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:22:15.083" endtime="20231123 10:22:15.212"/>
+</kw>
+<status status="PASS" starttime="20231123 10:22:05.541" endtime="20231123 10:22:15.212"/>
+</kw>
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaHome.banner}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:22:15.356" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745735344.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:22:15.212" endtime="20231123 10:22:15.356"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaHome.banner}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:22:15.487" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745735483.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:22:15.356" endtime="20231123 10:22:15.487"/>
+</kw>
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:22:15.600" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745735514.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:22:15.487" endtime="20231123 10:22:15.601"/>
+</kw>
+<status status="PASS" starttime="20231123 10:22:05.541" endtime="20231123 10:22:15.601"/>
+</kw>
+<kw name="Clique no botão &quot;AGORA NÂO&quot; do banner" library="kws_validar_botao_AGORA_NAO_Tela_Home">
+<kw name="Ir para a tela Home" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaHome.telaHome}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:22:15.855" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745735765.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:22:15.601" endtime="20231123 10:22:15.855"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaHome.telaHome}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:22:16.121" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745736031.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:22:15.855" endtime="20231123 10:22:16.121"/>
+</kw>
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:22:16.243" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745736157.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:22:16.121" endtime="20231123 10:22:16.243"/>
+</kw>
+<status status="PASS" starttime="20231123 10:22:15.601" endtime="20231123 10:22:16.243"/>
+</kw>
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaHome.btn_agoraNao_banner}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:22:16.361" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745736360.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:22:16.244" endtime="20231123 10:22:16.361"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${option_telaHome.btn_agoraNao_banner}</arg>
+<doc>Click</doc>
+<msg timestamp="20231123 10:22:17.136" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745736482.png'/&gt;
+[log] CLICK on L[228,987]@S(0) (559 msec)</msg>
+<status status="PASS" starttime="20231123 10:22:16.361" endtime="20231123 10:22:17.136"/>
+</kw>
+<kw name="Screen Should Not Contain" library="SikuliLibrary">
+<arg>${option_telaHome.btn_agoraNao_banner}</arg>
+<doc>Screen should not contain
+ Screen should not contain image</doc>
+<msg timestamp="20231123 10:22:17.238" level="INFO">Could not find P(btnAgoraNaoBanner.png) S: 0.699999988079071</msg>
+<status status="PASS" starttime="20231123 10:22:17.136" endtime="20231123 10:22:17.239"/>
+</kw>
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:22:17.377" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745737282.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:22:17.239" endtime="20231123 10:22:17.377"/>
+</kw>
+<status status="PASS" starttime="20231123 10:22:15.601" endtime="20231123 10:22:17.377"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:59.317" endtime="20231123 10:22:17.377"/>
+</test>
+<kw name="Fechar o sistema" library="hooks" type="TEARDOWN">
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:22:17.493" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745737407.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:22:17.378" endtime="20231123 10:22:17.493"/>
+</kw>
+<kw name="Clique no botao de logout" library="kws_logoutSucesso">
+<kw name="Ir para a tela Home" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaHome.telaHome}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:22:17.755" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745737672.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:22:17.494" endtime="20231123 10:22:17.756"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaHome.telaHome}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:22:18.012" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745737922.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:22:17.756" endtime="20231123 10:22:18.012"/>
+</kw>
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:22:18.131" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745738046.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:22:18.012" endtime="20231123 10:22:18.131"/>
+</kw>
+<status status="PASS" starttime="20231123 10:22:17.494" endtime="20231123 10:22:18.131"/>
+</kw>
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${options_logout.inc_logout}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:22:18.251" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745738250.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:22:18.131" endtime="20231123 10:22:18.251"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${options_logout.inc_logout}</arg>
+<doc>Click</doc>
+<msg timestamp="20231123 10:22:19.025" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745738374.png'/&gt;
+[log] CLICK on L[148,652]@S(0) (557 msec)</msg>
+<status status="PASS" starttime="20231123 10:22:18.251" endtime="20231123 10:22:19.025"/>
+</kw>
+<status status="PASS" starttime="20231123 10:22:17.493" endtime="20231123 10:22:19.025"/>
+</kw>
+<kw name="Clique em sim" library="kws_logoutSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${options_logout.tela_deseja_realizar_logout}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:22:19.150" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745739136.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:22:19.026" endtime="20231123 10:22:19.150"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${TIMEOUT.MINIMAL}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231123 10:22:24.151" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231123 10:22:19.150" endtime="20231123 10:22:24.151"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${options_logout.btn_sim}</arg>
+<doc>Click</doc>
+<msg timestamp="20231123 10:22:24.949" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745744282.png'/&gt;
+[log] CLICK on L[860,651]@S(0) (557 msec)</msg>
+<status status="PASS" starttime="20231123 10:22:24.152" endtime="20231123 10:22:24.949"/>
+</kw>
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.telaLogin}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:22:25.408" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745745390.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:22:24.949" endtime="20231123 10:22:25.409"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.telaLogin}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:22:25.540" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745745529.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:22:25.409" endtime="20231123 10:22:25.540"/>
+</kw>
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:22:25.620" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745745576.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:22:25.540" endtime="20231123 10:22:25.620"/>
+</kw>
+<status status="PASS" starttime="20231123 10:22:19.026" endtime="20231123 10:22:25.620"/>
+</kw>
+<status status="PASS" starttime="20231123 10:22:17.378" endtime="20231123 10:22:25.621"/>
+</kw>
+<status status="PASS" starttime="20231123 10:21:59.264" endtime="20231123 10:22:25.621"/>
+</suite>
+<suite id="s1-s1-s2-s5" name="TC6 Validar botao CONFIRA Tela Home" source="c:\PROJETOS\TESTES\ROBOT\SmartPOS\test\features\2-Tela home\TC6_Validar_botao_CONFIRA_Tela_Home.robot">
+<kw name="Iniciar o sistema" library="hooks" type="SETUP">
+<kw name="Carregar imagens do sistema" library="BaseImages">
+<for flavor="IN">
+<var>${dir}</var>
+<value>@{IMAGE_DIR}</value>
+<iter>
+<var name="${dir}">src\auto\images</var>
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>${dir}</arg>
+<doc>Add image path</doc>
+<status status="PASS" starttime="20231123 10:22:25.628" endtime="20231123 10:22:25.631"/>
+</kw>
+<status status="PASS" starttime="20231123 10:22:25.628" endtime="20231123 10:22:25.631"/>
+</iter>
+<iter>
+<var name="${dir}">src\auto\images\login</var>
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>${dir}</arg>
+<doc>Add image path</doc>
+<status status="PASS" starttime="20231123 10:22:25.631" endtime="20231123 10:22:25.633"/>
+</kw>
+<status status="PASS" starttime="20231123 10:22:25.631" endtime="20231123 10:22:25.633"/>
+</iter>
+<iter>
+<var name="${dir}">src\auto\images\home</var>
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>${dir}</arg>
+<doc>Add image path</doc>
+<status status="PASS" starttime="20231123 10:22:25.634" endtime="20231123 10:22:25.636"/>
+</kw>
+<status status="PASS" starttime="20231123 10:22:25.633" endtime="20231123 10:22:25.636"/>
+</iter>
+<iter>
+<var name="${dir}">src\auto\images\logout</var>
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>${dir}</arg>
+<doc>Add image path</doc>
+<status status="PASS" starttime="20231123 10:22:25.636" endtime="20231123 10:22:25.638"/>
+</kw>
+<status status="PASS" starttime="20231123 10:22:25.636" endtime="20231123 10:22:25.638"/>
+</iter>
+<status status="PASS" starttime="20231123 10:22:25.628" endtime="20231123 10:22:25.638"/>
+</for>
+<status status="PASS" starttime="20231123 10:22:25.628" endtime="20231123 10:22:25.638"/>
+</kw>
+<kw name="Executar sistema SmartPdv" library="hooks">
+<kw name="Open Application" library="SikuliLibrary">
+<arg>D://Netpos//SmartPdv//SmartPdv.exe</arg>
+<doc>Open application
+ To open app with parameters, refer:
+ https://sikulix-2014.readthedocs.io/en/latest/appclass.html#App.App</doc>
+<status status="PASS" starttime="20231123 10:22:25.639" endtime="20231123 10:22:25.673"/>
+</kw>
+<status status="PASS" starttime="20231123 10:22:25.638" endtime="20231123 10:22:25.673"/>
+</kw>
+<status status="PASS" starttime="20231123 10:22:25.628" endtime="20231123 10:22:25.674"/>
+</kw>
+<test id="s1-s1-s2-s5-t1" name="Cenário 01 - Validar o botao CONFIRA do banner da tela home" line="8">
+<kw name="Logar no sistema smartPOS" library="kws_validar_header_tela_home">
+<kw name="Estar na tela de Login" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.telaLogin}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:22:25.804" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745745792.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:22:25.674" endtime="20231123 10:22:25.804"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.telaLogin}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:22:25.929" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745745919.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:22:25.804" endtime="20231123 10:22:25.929"/>
+</kw>
+<status status="PASS" starttime="20231123 10:22:25.674" endtime="20231123 10:22:25.929"/>
+</kw>
+<status status="PASS" starttime="20231123 10:22:25.674" endtime="20231123 10:22:25.929"/>
+</kw>
+<kw name="No campo input E-mail adicionar o e-mail valido" library="kws_validar_header_tela_home">
+<kw name="No campo input email, digite um email válido" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.input_email}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:22:26.049" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745746046.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:22:25.930" endtime="20231123 10:22:26.049"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${option_telaLogin.input_email}</arg>
+<arg>${EMAIL}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20231123 10:22:29.405" level="INFO">Input Text:
+eduardograciebarra@gmail.com</msg>
+<msg timestamp="20231123 10:22:29.405" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745746155.png'/&gt;
+[log] CLICK on L[957,476]@S(0) (566 msec)
+[log]  TYPE "eduardograciebarra@gmail.com"</msg>
+<status status="PASS" starttime="20231123 10:22:26.049" endtime="20231123 10:22:29.405"/>
+</kw>
+<status status="PASS" starttime="20231123 10:22:25.930" endtime="20231123 10:22:29.405"/>
+</kw>
+<status status="PASS" starttime="20231123 10:22:25.930" endtime="20231123 10:22:29.405"/>
+</kw>
+<kw name="No campo input senha digitar uma senha valida" library="kws_validar_header_tela_home">
+<kw name="No campo inpuit senha, digite uma senha válida" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.input_password}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:22:29.529" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745749518.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:22:29.406" endtime="20231123 10:22:29.529"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${option_telaLogin.input_password}</arg>
+<arg>${SENHA}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20231123 10:22:31.028" level="INFO">Input Text:
+teste123</msg>
+<msg timestamp="20231123 10:22:31.028" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745749643.png'/&gt;
+[log] CLICK on L[957,558]@S(0) (555 msec)
+[log]  TYPE "teste123"</msg>
+<status status="PASS" starttime="20231123 10:22:29.529" endtime="20231123 10:22:31.028"/>
+</kw>
+<status status="PASS" starttime="20231123 10:22:29.406" endtime="20231123 10:22:31.028"/>
+</kw>
+<status status="PASS" starttime="20231123 10:22:29.405" endtime="20231123 10:22:31.028"/>
+</kw>
+<kw name="Clique no botão entrar" library="kws_validar_header_tela_home">
+<kw name="Clique no botao Entrar" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.btn_entrar}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:22:31.152" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745751141.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:22:31.029" endtime="20231123 10:22:31.152"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${option_telaLogin.btn_entrar}</arg>
+<doc>Click</doc>
+<msg timestamp="20231123 10:22:31.904" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745751266.png'/&gt;
+[log] CLICK on L[957,665]@S(0) (553 msec)</msg>
+<status status="PASS" starttime="20231123 10:22:31.152" endtime="20231123 10:22:31.904"/>
+</kw>
+<status status="PASS" starttime="20231123 10:22:31.029" endtime="20231123 10:22:31.904"/>
+</kw>
+<status status="PASS" starttime="20231123 10:22:31.029" endtime="20231123 10:22:31.904"/>
+</kw>
+<kw name="Verifico o banner da tela home" library="kws_validar_banner_tela_home">
+<kw name="Ir para a tela Home" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaHome.telaHome}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:22:41.129" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745761040.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:22:31.905" endtime="20231123 10:22:41.129"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaHome.telaHome}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:22:41.379" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745761289.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:22:41.129" endtime="20231123 10:22:41.379"/>
+</kw>
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:22:41.498" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745761413.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:22:41.379" endtime="20231123 10:22:41.499"/>
+</kw>
+<status status="PASS" starttime="20231123 10:22:31.905" endtime="20231123 10:22:41.499"/>
+</kw>
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaHome.banner}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:22:41.636" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745761631.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:22:41.499" endtime="20231123 10:22:41.636"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaHome.banner}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:22:41.777" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745761773.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:22:41.637" endtime="20231123 10:22:41.777"/>
+</kw>
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:22:41.890" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745761804.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:22:41.778" endtime="20231123 10:22:41.890"/>
+</kw>
+<status status="PASS" starttime="20231123 10:22:31.905" endtime="20231123 10:22:41.890"/>
+</kw>
+<kw name="Clique no botão &quot;CONFIRA&quot; do banner" library="kws_validar_botao_CONFIRA_tela_home">
+<kw name="Ir para a tela Home" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaHome.telaHome}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:22:42.159" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745762069.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:22:41.891" endtime="20231123 10:22:42.159"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaHome.telaHome}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:22:42.413" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745762321.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:22:42.160" endtime="20231123 10:22:42.413"/>
+</kw>
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:22:42.531" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745762444.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:22:42.413" endtime="20231123 10:22:42.531"/>
+</kw>
+<status status="PASS" starttime="20231123 10:22:41.891" endtime="20231123 10:22:42.531"/>
+</kw>
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaHome.btn_confira_banner}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:22:42.665" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745762663.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:22:42.531" endtime="20231123 10:22:42.665"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${option_telaHome.btn_confira_banner}</arg>
+<doc>Click</doc>
+<msg timestamp="20231123 10:22:43.488" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745762805.png'/&gt;
+[log] CLICK on L[69,989]@S(0) (565 msec)</msg>
+<status status="PASS" starttime="20231123 10:22:42.666" endtime="20231123 10:22:43.488"/>
+</kw>
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaHome.planos_precos}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:22:43.953" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745763943.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:22:43.488" endtime="20231123 10:22:43.953"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaHome.planos_precos}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:22:44.079" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745764070.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:22:43.953" endtime="20231123 10:22:44.079"/>
+</kw>
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:22:44.157" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745764115.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:22:44.079" endtime="20231123 10:22:44.158"/>
+</kw>
+<status status="PASS" starttime="20231123 10:22:41.891" endtime="20231123 10:22:44.158"/>
+</kw>
+<status status="PASS" starttime="20231123 10:22:25.674" endtime="20231123 10:22:44.158"/>
+</test>
+<kw name="Fechar o sistema" library="hooks" type="TEARDOWN">
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:22:44.234" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745764193.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:22:44.159" endtime="20231123 10:22:44.234"/>
+</kw>
+<kw name="Clique no botao de logout" library="kws_logoutSucesso">
+<kw name="Ir para a tela Home" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaHome.telaHome}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:22:59.494" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745779398.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:22:44.235" endtime="20231123 10:22:59.494"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaHome.telaHome}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:22:59.768" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745779678.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:22:59.495" endtime="20231123 10:22:59.768"/>
+</kw>
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:22:59.889" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745779803.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:22:59.768" endtime="20231123 10:22:59.890"/>
+</kw>
+<status status="PASS" starttime="20231123 10:22:44.235" endtime="20231123 10:22:59.890"/>
+</kw>
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${options_logout.inc_logout}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:23:00.026" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745780022.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:22:59.890" endtime="20231123 10:23:00.026"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${options_logout.inc_logout}</arg>
+<doc>Click</doc>
+<msg timestamp="20231123 10:23:00.798" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745780147.png'/&gt;
+[log] CLICK on L[148,652]@S(0) (555 msec)</msg>
+<status status="PASS" starttime="20231123 10:23:00.026" endtime="20231123 10:23:00.798"/>
+</kw>
+<status status="PASS" starttime="20231123 10:22:44.234" endtime="20231123 10:23:00.798"/>
+</kw>
+<kw name="Clique em sim" library="kws_logoutSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${options_logout.tela_deseja_realizar_logout}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:23:00.923" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745780909.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:23:00.798" endtime="20231123 10:23:00.924"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${TIMEOUT.MINIMAL}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231123 10:23:05.924" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231123 10:23:00.924" endtime="20231123 10:23:05.924"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${options_logout.btn_sim}</arg>
+<doc>Click</doc>
+<msg timestamp="20231123 10:23:06.726" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745786054.png'/&gt;
+[log] CLICK on L[860,651]@S(0) (563 msec)</msg>
+<status status="PASS" starttime="20231123 10:23:05.924" endtime="20231123 10:23:06.726"/>
+</kw>
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.telaLogin}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:23:07.213" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745787194.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:23:06.727" endtime="20231123 10:23:07.214"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.telaLogin}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:23:07.348" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745787336.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:23:07.214" endtime="20231123 10:23:07.348"/>
+</kw>
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:23:07.427" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745787383.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:23:07.348" endtime="20231123 10:23:07.427"/>
+</kw>
+<status status="PASS" starttime="20231123 10:23:00.798" endtime="20231123 10:23:07.427"/>
+</kw>
+<status status="PASS" starttime="20231123 10:22:44.159" endtime="20231123 10:23:07.427"/>
+</kw>
+<status status="PASS" starttime="20231123 10:22:25.622" endtime="20231123 10:23:07.427"/>
+</suite>
+<suite id="s1-s1-s2-s6" name="TC7 Validar minimizar menu hamburger" source="c:\PROJETOS\TESTES\ROBOT\SmartPOS\test\features\2-Tela home\TC7_Validar_minimizar_menu_hamburger.robot">
+<kw name="Iniciar o sistema" library="hooks" type="SETUP">
+<kw name="Carregar imagens do sistema" library="BaseImages">
+<for flavor="IN">
+<var>${dir}</var>
+<value>@{IMAGE_DIR}</value>
+<iter>
+<var name="${dir}">src\auto\images</var>
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>${dir}</arg>
+<doc>Add image path</doc>
+<status status="PASS" starttime="20231123 10:23:07.436" endtime="20231123 10:23:07.438"/>
+</kw>
+<status status="PASS" starttime="20231123 10:23:07.436" endtime="20231123 10:23:07.438"/>
+</iter>
+<iter>
+<var name="${dir}">src\auto\images\login</var>
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>${dir}</arg>
+<doc>Add image path</doc>
+<status status="PASS" starttime="20231123 10:23:07.438" endtime="20231123 10:23:07.440"/>
+</kw>
+<status status="PASS" starttime="20231123 10:23:07.438" endtime="20231123 10:23:07.440"/>
+</iter>
+<iter>
+<var name="${dir}">src\auto\images\home</var>
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>${dir}</arg>
+<doc>Add image path</doc>
+<status status="PASS" starttime="20231123 10:23:07.440" endtime="20231123 10:23:07.441"/>
+</kw>
+<status status="PASS" starttime="20231123 10:23:07.440" endtime="20231123 10:23:07.442"/>
+</iter>
+<iter>
+<var name="${dir}">src\auto\images\logout</var>
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>${dir}</arg>
+<doc>Add image path</doc>
+<status status="PASS" starttime="20231123 10:23:07.442" endtime="20231123 10:23:07.443"/>
+</kw>
+<status status="PASS" starttime="20231123 10:23:07.442" endtime="20231123 10:23:07.443"/>
+</iter>
+<status status="PASS" starttime="20231123 10:23:07.435" endtime="20231123 10:23:07.443"/>
+</for>
+<status status="PASS" starttime="20231123 10:23:07.435" endtime="20231123 10:23:07.443"/>
+</kw>
+<kw name="Executar sistema SmartPdv" library="hooks">
+<kw name="Open Application" library="SikuliLibrary">
+<arg>D://Netpos//SmartPdv//SmartPdv.exe</arg>
+<doc>Open application
+ To open app with parameters, refer:
+ https://sikulix-2014.readthedocs.io/en/latest/appclass.html#App.App</doc>
+<status status="PASS" starttime="20231123 10:23:07.443" endtime="20231123 10:23:07.483"/>
+</kw>
+<status status="PASS" starttime="20231123 10:23:07.443" endtime="20231123 10:23:07.483"/>
+</kw>
+<status status="PASS" starttime="20231123 10:23:07.435" endtime="20231123 10:23:07.483"/>
+</kw>
+<test id="s1-s1-s2-s6-t1" name="Cenário 01 - Validar minimizar o menu hamburger" line="8">
+<kw name="Logar no sistema smartPOS" library="kws_validar_header_tela_home">
+<kw name="Estar na tela de Login" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.telaLogin}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:23:07.637" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745787618.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:23:07.484" endtime="20231123 10:23:07.637"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.telaLogin}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:23:07.769" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745787758.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:23:07.637" endtime="20231123 10:23:07.769"/>
+</kw>
+<status status="PASS" starttime="20231123 10:23:07.484" endtime="20231123 10:23:07.769"/>
+</kw>
+<status status="PASS" starttime="20231123 10:23:07.484" endtime="20231123 10:23:07.769"/>
+</kw>
+<kw name="No campo input E-mail adicionar o e-mail valido" library="kws_validar_header_tela_home">
+<kw name="No campo input email, digite um email válido" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.input_email}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:23:07.886" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745787885.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:23:07.770" endtime="20231123 10:23:07.886"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${option_telaLogin.input_email}</arg>
+<arg>${EMAIL}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20231123 10:23:11.217" level="INFO">Input Text:
+eduardograciebarra@gmail.com</msg>
+<msg timestamp="20231123 10:23:11.217" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745787994.png'/&gt;
+[log] CLICK on L[957,476]@S(0) (564 msec)
+[log]  TYPE "eduardograciebarra@gmail.com"</msg>
+<status status="PASS" starttime="20231123 10:23:07.886" endtime="20231123 10:23:11.217"/>
+</kw>
+<status status="PASS" starttime="20231123 10:23:07.770" endtime="20231123 10:23:11.217"/>
+</kw>
+<status status="PASS" starttime="20231123 10:23:07.770" endtime="20231123 10:23:11.217"/>
+</kw>
+<kw name="No campo input senha digitar uma senha valida" library="kws_validar_header_tela_home">
+<kw name="No campo inpuit senha, digite uma senha válida" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.input_password}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:23:11.355" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745791344.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:23:11.218" endtime="20231123 10:23:11.355"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${option_telaLogin.input_password}</arg>
+<arg>${SENHA}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20231123 10:23:12.874" level="INFO">Input Text:
+teste123</msg>
+<msg timestamp="20231123 10:23:12.874" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745791469.png'/&gt;
+[log] CLICK on L[957,558]@S(0) (562 msec)
+[log]  TYPE "teste123"</msg>
+<status status="PASS" starttime="20231123 10:23:11.355" endtime="20231123 10:23:12.874"/>
+</kw>
+<status status="PASS" starttime="20231123 10:23:11.218" endtime="20231123 10:23:12.874"/>
+</kw>
+<status status="PASS" starttime="20231123 10:23:11.217" endtime="20231123 10:23:12.875"/>
+</kw>
+<kw name="Clique no botão entrar" library="kws_validar_header_tela_home">
+<kw name="Clique no botao Entrar" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.btn_entrar}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:23:12.997" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745792987.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:23:12.875" endtime="20231123 10:23:12.997"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${option_telaLogin.btn_entrar}</arg>
+<doc>Click</doc>
+<msg timestamp="20231123 10:23:13.766" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745793111.png'/&gt;
+[log] CLICK on L[957,665]@S(0) (567 msec)</msg>
+<status status="PASS" starttime="20231123 10:23:12.998" endtime="20231123 10:23:13.766"/>
+</kw>
+<status status="PASS" starttime="20231123 10:23:12.875" endtime="20231123 10:23:13.766"/>
+</kw>
+<status status="PASS" starttime="20231123 10:23:12.875" endtime="20231123 10:23:13.766"/>
+</kw>
+<kw name="Verifico o menu hamburger da tela home" library="kws_validar_menu_hamburger_tela_home">
+<kw name="Ir para a tela Home" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaHome.telaHome}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:23:23.024" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745802931.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:23:13.768" endtime="20231123 10:23:23.024"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaHome.telaHome}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:23:23.279" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745803195.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:23:23.024" endtime="20231123 10:23:23.279"/>
+</kw>
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:23:23.409" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745803319.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:23:23.279" endtime="20231123 10:23:23.409"/>
+</kw>
+<status status="PASS" starttime="20231123 10:23:13.768" endtime="20231123 10:23:23.409"/>
+</kw>
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaHome.menuHamburger}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:23:23.549" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745803534.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:23:23.409" endtime="20231123 10:23:23.549"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaHome.menuHamburger}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:23:23.679" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745803673.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:23:23.549" endtime="20231123 10:23:23.679"/>
+</kw>
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:23:23.792" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745803705.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:23:23.679" endtime="20231123 10:23:23.792"/>
+</kw>
+<status status="PASS" starttime="20231123 10:23:13.766" endtime="20231123 10:23:23.792"/>
+</kw>
+<kw name="Clico no menu Hamburger" library="kws_Validar_minimizar_menu_hamburger">
+<kw name="Ir para a tela Home" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaHome.telaHome}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:23:24.061" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745803970.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:23:23.793" endtime="20231123 10:23:24.061"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaHome.telaHome}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:23:24.325" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745804235.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:23:24.061" endtime="20231123 10:23:24.325"/>
+</kw>
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:23:24.447" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745804360.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:23:24.325" endtime="20231123 10:23:24.447"/>
+</kw>
+<status status="PASS" starttime="20231123 10:23:23.792" endtime="20231123 10:23:24.447"/>
+</kw>
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaHome.inc_menu_hamburger}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:23:24.548" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745804547.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:23:24.447" endtime="20231123 10:23:24.548"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${option_telaHome.inc_menu_hamburger}</arg>
+<doc>Click</doc>
+<msg timestamp="20231123 10:23:25.296" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745804658.png'/&gt;
+[log] CLICK on L[31,29]@S(0) (557 msec)</msg>
+<status status="PASS" starttime="20231123 10:23:24.548" endtime="20231123 10:23:25.296"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaHome.menu_hamburger_minimizado}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:23:25.408" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745805405.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:23:25.296" endtime="20231123 10:23:25.408"/>
+</kw>
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:23:25.523" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745805437.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:23:25.408" endtime="20231123 10:23:25.523"/>
+</kw>
+<status status="PASS" starttime="20231123 10:23:23.792" endtime="20231123 10:23:25.523"/>
+</kw>
+<status status="PASS" starttime="20231123 10:23:07.483" endtime="20231123 10:23:25.523"/>
+</test>
+<kw name="Fechar o sistema" library="hooks" type="TEARDOWN">
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:23:25.647" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745805562.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:23:25.524" endtime="20231123 10:23:25.647"/>
+</kw>
+<kw name="Clique no botao de logout" library="kws_logoutSucesso">
+<kw name="Ir para a tela Home" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaHome.telaHome}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:23:40.583" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745820493.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:23:25.648" endtime="20231123 10:23:40.583"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaHome.telaHome}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:23:40.837" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745820759.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:23:40.584" endtime="20231123 10:23:40.837"/>
+</kw>
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:23:40.950" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745820868.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:23:40.837" endtime="20231123 10:23:40.951"/>
+</kw>
+<status status="PASS" starttime="20231123 10:23:25.648" endtime="20231123 10:23:40.951"/>
+</kw>
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${options_logout.inc_logout}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:23:41.408" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745821398.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:23:40.951" endtime="20231123 10:23:41.408"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${options_logout.inc_logout}</arg>
+<doc>Click</doc>
+<msg timestamp="20231123 10:23:42.177" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745821524.png'/&gt;
+[log] CLICK on L[148,652]@S(0) (554 msec)</msg>
+<status status="PASS" starttime="20231123 10:23:41.408" endtime="20231123 10:23:42.178"/>
+</kw>
+<status status="PASS" starttime="20231123 10:23:25.647" endtime="20231123 10:23:42.178"/>
+</kw>
+<kw name="Clique em sim" library="kws_logoutSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${options_logout.tela_deseja_realizar_logout}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:23:42.316" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745822302.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:23:42.178" endtime="20231123 10:23:42.317"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${TIMEOUT.MINIMAL}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231123 10:23:47.317" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231123 10:23:42.317" endtime="20231123 10:23:47.317"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${options_logout.btn_sim}</arg>
+<doc>Click</doc>
+<msg timestamp="20231123 10:23:48.124" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745827451.png'/&gt;
+[log] CLICK on L[860,651]@S(0) (564 msec)</msg>
+<status status="PASS" starttime="20231123 10:23:47.317" endtime="20231123 10:23:48.124"/>
+</kw>
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.telaLogin}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:23:48.588" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745828576.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:23:48.124" endtime="20231123 10:23:48.588"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.telaLogin}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:23:48.727" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745828715.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:23:48.588" endtime="20231123 10:23:48.727"/>
+</kw>
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:23:48.805" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745828760.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:23:48.727" endtime="20231123 10:23:48.805"/>
+</kw>
+<status status="PASS" starttime="20231123 10:23:42.178" endtime="20231123 10:23:48.805"/>
+</kw>
+<status status="PASS" starttime="20231123 10:23:25.524" endtime="20231123 10:23:48.805"/>
+</kw>
+<status status="PASS" starttime="20231123 10:23:07.428" endtime="20231123 10:23:48.805"/>
+</suite>
+<suite id="s1-s1-s2-s7" name="TC8 Validar maximizar menu hamburger" source="c:\PROJETOS\TESTES\ROBOT\SmartPOS\test\features\2-Tela home\TC8_Validar_maximizar_menu_hamburger.robot">
+<kw name="Iniciar o sistema" library="hooks" type="SETUP">
+<kw name="Carregar imagens do sistema" library="BaseImages">
+<for flavor="IN">
+<var>${dir}</var>
+<value>@{IMAGE_DIR}</value>
+<iter>
+<var name="${dir}">src\auto\images</var>
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>${dir}</arg>
+<doc>Add image path</doc>
+<status status="PASS" starttime="20231123 10:23:48.813" endtime="20231123 10:23:48.815"/>
+</kw>
+<status status="PASS" starttime="20231123 10:23:48.813" endtime="20231123 10:23:48.815"/>
+</iter>
+<iter>
+<var name="${dir}">src\auto\images\login</var>
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>${dir}</arg>
+<doc>Add image path</doc>
+<status status="PASS" starttime="20231123 10:23:48.815" endtime="20231123 10:23:48.817"/>
+</kw>
+<status status="PASS" starttime="20231123 10:23:48.815" endtime="20231123 10:23:48.817"/>
+</iter>
+<iter>
+<var name="${dir}">src\auto\images\home</var>
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>${dir}</arg>
+<doc>Add image path</doc>
+<status status="PASS" starttime="20231123 10:23:48.817" endtime="20231123 10:23:48.819"/>
+</kw>
+<status status="PASS" starttime="20231123 10:23:48.817" endtime="20231123 10:23:48.819"/>
+</iter>
+<iter>
+<var name="${dir}">src\auto\images\logout</var>
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>${dir}</arg>
+<doc>Add image path</doc>
+<status status="PASS" starttime="20231123 10:23:48.819" endtime="20231123 10:23:48.820"/>
+</kw>
+<status status="PASS" starttime="20231123 10:23:48.819" endtime="20231123 10:23:48.820"/>
+</iter>
+<status status="PASS" starttime="20231123 10:23:48.813" endtime="20231123 10:23:48.820"/>
+</for>
+<status status="PASS" starttime="20231123 10:23:48.813" endtime="20231123 10:23:48.820"/>
+</kw>
+<kw name="Executar sistema SmartPdv" library="hooks">
+<kw name="Open Application" library="SikuliLibrary">
+<arg>D://Netpos//SmartPdv//SmartPdv.exe</arg>
+<doc>Open application
+ To open app with parameters, refer:
+ https://sikulix-2014.readthedocs.io/en/latest/appclass.html#App.App</doc>
+<status status="PASS" starttime="20231123 10:23:48.821" endtime="20231123 10:23:48.856"/>
+</kw>
+<status status="PASS" starttime="20231123 10:23:48.820" endtime="20231123 10:23:48.856"/>
+</kw>
+<status status="PASS" starttime="20231123 10:23:48.813" endtime="20231123 10:23:48.856"/>
+</kw>
+<test id="s1-s1-s2-s7-t1" name="Cenário 01 - Validar maximizar o menu hamburger" line="8">
+<kw name="Logar no sistema smartPOS" library="kws_validar_header_tela_home">
+<kw name="Estar na tela de Login" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.telaLogin}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:23:48.993" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745828980.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:23:48.857" endtime="20231123 10:23:48.993"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.telaLogin}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:23:49.117" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745829106.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:23:48.994" endtime="20231123 10:23:49.117"/>
+</kw>
+<status status="PASS" starttime="20231123 10:23:48.857" endtime="20231123 10:23:49.117"/>
+</kw>
+<status status="PASS" starttime="20231123 10:23:48.857" endtime="20231123 10:23:49.117"/>
+</kw>
+<kw name="No campo input E-mail adicionar o e-mail valido" library="kws_validar_header_tela_home">
+<kw name="No campo input email, digite um email válido" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.input_email}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:23:49.234" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745829232.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:23:49.118" endtime="20231123 10:23:49.234"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${option_telaLogin.input_email}</arg>
+<arg>${EMAIL}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20231123 10:23:52.630" level="INFO">Input Text:
+eduardograciebarra@gmail.com</msg>
+<msg timestamp="20231123 10:23:52.630" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745829342.png'/&gt;
+[log] CLICK on L[957,476]@S(0) (569 msec)
+[log]  TYPE "eduardograciebarra@gmail.com"</msg>
+<status status="PASS" starttime="20231123 10:23:49.234" endtime="20231123 10:23:52.630"/>
+</kw>
+<status status="PASS" starttime="20231123 10:23:49.118" endtime="20231123 10:23:52.630"/>
+</kw>
+<status status="PASS" starttime="20231123 10:23:49.118" endtime="20231123 10:23:52.630"/>
+</kw>
+<kw name="No campo input senha digitar uma senha valida" library="kws_validar_header_tela_home">
+<kw name="No campo inpuit senha, digite uma senha válida" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.input_password}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:23:52.765" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745832754.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:23:52.631" endtime="20231123 10:23:52.765"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${option_telaLogin.input_password}</arg>
+<arg>${SENHA}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20231123 10:23:54.279" level="INFO">Input Text:
+teste123</msg>
+<msg timestamp="20231123 10:23:54.279" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745832880.png'/&gt;
+[log] CLICK on L[957,558]@S(0) (559 msec)
+[log]  TYPE "teste123"</msg>
+<status status="PASS" starttime="20231123 10:23:52.765" endtime="20231123 10:23:54.279"/>
+</kw>
+<status status="PASS" starttime="20231123 10:23:52.631" endtime="20231123 10:23:54.279"/>
+</kw>
+<status status="PASS" starttime="20231123 10:23:52.631" endtime="20231123 10:23:54.279"/>
+</kw>
+<kw name="Clique no botão entrar" library="kws_validar_header_tela_home">
+<kw name="Clique no botao Entrar" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.btn_entrar}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:23:54.393" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745834391.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:23:54.280" endtime="20231123 10:23:54.393"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${option_telaLogin.btn_entrar}</arg>
+<doc>Click</doc>
+<msg timestamp="20231123 10:23:55.143" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745834502.png'/&gt;
+[log] CLICK on L[957,665]@S(0) (559 msec)</msg>
+<status status="PASS" starttime="20231123 10:23:54.393" endtime="20231123 10:23:55.143"/>
+</kw>
+<status status="PASS" starttime="20231123 10:23:54.280" endtime="20231123 10:23:55.143"/>
+</kw>
+<status status="PASS" starttime="20231123 10:23:54.280" endtime="20231123 10:23:55.143"/>
+</kw>
+<kw name="Verifico o menu hamburger da tela home" library="kws_validar_menu_hamburger_tela_home">
+<kw name="Ir para a tela Home" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaHome.telaHome}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:24:04.702" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745844613.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:23:55.144" endtime="20231123 10:24:04.702"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaHome.telaHome}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:24:04.968" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745844879.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:04.702" endtime="20231123 10:24:04.968"/>
+</kw>
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:24:05.093" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745845004.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:04.968" endtime="20231123 10:24:05.093"/>
+</kw>
+<status status="PASS" starttime="20231123 10:23:55.143" endtime="20231123 10:24:05.093"/>
+</kw>
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaHome.menuHamburger}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:24:05.216" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745845210.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:05.093" endtime="20231123 10:24:05.216"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaHome.menuHamburger}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:24:05.353" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745845348.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:05.216" endtime="20231123 10:24:05.354"/>
+</kw>
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:24:05.480" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745845394.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:05.354" endtime="20231123 10:24:05.480"/>
+</kw>
+<status status="PASS" starttime="20231123 10:23:55.143" endtime="20231123 10:24:05.480"/>
 </kw>
 <kw name="Clico no menu hamburger maximizado" library="kws_validar_maximizar_menu_hamburger">
 <kw name="Ir para a tela Home" library="kws_loginSucesso">
@@ -194,38 +2374,38 @@ teste123</msg>
 <arg>${TIMEOUT.DEFAULT}</arg>
 <doc>Wait until screen contain
  Wait until image shown in screen</doc>
-<msg timestamp="20231122 20:58:40.535" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700697520447.png'/&gt;</msg>
-<status status="PASS" starttime="20231122 20:58:40.264" endtime="20231122 20:58:40.535"/>
+<msg timestamp="20231123 10:24:05.731" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745845642.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:05.481" endtime="20231123 10:24:05.733"/>
 </kw>
 <kw name="Screen Should Contain" library="SikuliLibrary">
 <arg>${option_telaHome.telaHome}</arg>
 <doc>Screen should contain</doc>
-<msg timestamp="20231122 20:58:40.793" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700697520714.png'/&gt;</msg>
-<status status="PASS" starttime="20231122 20:58:40.535" endtime="20231122 20:58:40.794"/>
+<msg timestamp="20231123 10:24:05.996" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745845907.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:05.733" endtime="20231123 10:24:05.997"/>
 </kw>
 <kw name="Capture Screen" library="SikuliLibrary">
 <doc>Capture whole screen, file name is returned</doc>
-<msg timestamp="20231122 20:58:40.924" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700697520839.png'/&gt;</msg>
-<status status="PASS" starttime="20231122 20:58:40.794" endtime="20231122 20:58:40.924"/>
+<msg timestamp="20231123 10:24:06.119" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745846032.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:05.997" endtime="20231123 10:24:06.119"/>
 </kw>
-<status status="PASS" starttime="20231122 20:58:40.264" endtime="20231122 20:58:40.924"/>
+<status status="PASS" starttime="20231123 10:24:05.481" endtime="20231123 10:24:06.119"/>
 </kw>
 <kw name="Wait Until Screen Contain" library="SikuliLibrary">
 <arg>${option_telaHome.menuHamburger}</arg>
 <arg>${TIMEOUT.DEFAULT}</arg>
 <doc>Wait until screen contain
  Wait until image shown in screen</doc>
-<msg timestamp="20231122 20:58:41.075" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700697521060.png'/&gt;</msg>
-<status status="PASS" starttime="20231122 20:58:40.925" endtime="20231122 20:58:41.075"/>
+<msg timestamp="20231123 10:24:06.264" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745846250.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:06.119" endtime="20231123 10:24:06.264"/>
 </kw>
 <kw name="Click" library="SikuliLibrary">
 <arg>${option_telaHome.inc_menu_hamburger}</arg>
 <doc>Click</doc>
-<msg timestamp="20231122 20:58:41.850" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700697521201.png'/&gt;
-[log] CLICK on L[31,29]@S(0) (560 msec)</msg>
-<status status="PASS" starttime="20231122 20:58:41.075" endtime="20231122 20:58:41.851"/>
+<msg timestamp="20231123 10:24:07.015" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745846374.png'/&gt;
+[log] CLICK on L[31,29]@S(0) (553 msec)</msg>
+<status status="PASS" starttime="20231123 10:24:06.265" endtime="20231123 10:24:07.015"/>
 </kw>
-<status status="PASS" starttime="20231122 20:58:40.264" endtime="20231122 20:58:41.851"/>
+<status status="PASS" starttime="20231123 10:24:05.480" endtime="20231123 10:24:07.015"/>
 </kw>
 <kw name="Clico no menu Hamburger minimizado" library="kws_validar_maximizar_menu_hamburger">
 <kw name="Wait Until Screen Contain" library="SikuliLibrary">
@@ -233,55 +2413,808 @@ teste123</msg>
 <arg>${TIMEOUT.DEFAULT}</arg>
 <doc>Wait until screen contain
  Wait until image shown in screen</doc>
-<msg timestamp="20231122 20:58:41.949" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700697521946.png'/&gt;</msg>
-<status status="PASS" starttime="20231122 20:58:41.851" endtime="20231122 20:58:41.949"/>
+<msg timestamp="20231123 10:24:07.135" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745847124.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:07.016" endtime="20231123 10:24:07.135"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>${TIMEOUT.MINIMAL}</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231122 20:58:46.950" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20231122 20:58:41.949" endtime="20231122 20:58:46.950"/>
+<msg timestamp="20231123 10:24:12.137" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231123 10:24:07.136" endtime="20231123 10:24:12.137"/>
 </kw>
 <kw name="Click" library="SikuliLibrary">
 <arg>${option_telaHome.inc_menu_hamburger}</arg>
 <doc>Click</doc>
-<msg timestamp="20231122 20:58:47.208" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700697527067.png'/&gt;
-[log] CLICK on L[31,29]@S(0) (54 msec)</msg>
-<status status="PASS" starttime="20231122 20:58:46.950" endtime="20231122 20:58:47.209"/>
+<msg timestamp="20231123 10:24:12.396" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745852245.png'/&gt;
+[log] CLICK on L[31,29]@S(0) (64 msec)</msg>
+<status status="PASS" starttime="20231123 10:24:12.137" endtime="20231123 10:24:12.396"/>
 </kw>
 <kw name="Wait Until Screen Contain" library="SikuliLibrary">
 <arg>${option_telaHome.menuHamburger}</arg>
 <arg>${TIMEOUT.DEFAULT}</arg>
 <doc>Wait until screen contain
  Wait until image shown in screen</doc>
-<msg timestamp="20231122 20:58:49.025" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700697529011.png'/&gt;</msg>
-<status status="PASS" starttime="20231122 20:58:47.209" endtime="20231122 20:58:49.025"/>
+<msg timestamp="20231123 10:24:13.868" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745853853.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:12.397" endtime="20231123 10:24:13.868"/>
 </kw>
 <kw name="Screen Should Contain" library="SikuliLibrary">
 <arg>${option_telaHome.menuHamburger}</arg>
 <doc>Screen should contain</doc>
-<msg timestamp="20231122 20:58:49.158" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700697529152.png'/&gt;</msg>
-<status status="PASS" starttime="20231122 20:58:49.025" endtime="20231122 20:58:49.158"/>
+<msg timestamp="20231123 10:24:13.998" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745853992.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:13.868" endtime="20231123 10:24:13.999"/>
 </kw>
 <kw name="Capture Screen" library="SikuliLibrary">
 <doc>Capture whole screen, file name is returned</doc>
-<msg timestamp="20231122 20:58:49.283" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700697529198.png'/&gt;</msg>
-<status status="PASS" starttime="20231122 20:58:49.158" endtime="20231122 20:58:49.284"/>
+<msg timestamp="20231123 10:24:14.124" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745854038.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:13.999" endtime="20231123 10:24:14.125"/>
 </kw>
-<status status="PASS" starttime="20231122 20:58:41.851" endtime="20231122 20:58:49.284"/>
+<status status="PASS" starttime="20231123 10:24:07.016" endtime="20231123 10:24:14.125"/>
 </kw>
-<status status="PASS" starttime="20231122 20:58:19.116" endtime="20231122 20:58:49.284"/>
+<status status="PASS" starttime="20231123 10:23:48.856" endtime="20231123 10:24:14.125"/>
 </test>
-<status status="PASS" starttime="20231122 20:58:16.259" endtime="20231122 20:58:49.285"/>
+<kw name="Fechar o sistema" library="hooks" type="TEARDOWN">
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:24:14.249" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745854162.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:14.126" endtime="20231123 10:24:14.249"/>
+</kw>
+<kw name="Clique no botao de logout" library="kws_logoutSucesso">
+<kw name="Ir para a tela Home" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaHome.telaHome}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:24:14.495" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745854412.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:14.249" endtime="20231123 10:24:14.496"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaHome.telaHome}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:24:14.766" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745854676.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:14.496" endtime="20231123 10:24:14.766"/>
+</kw>
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:24:14.889" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745854802.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:14.766" endtime="20231123 10:24:14.889"/>
+</kw>
+<status status="PASS" starttime="20231123 10:24:14.249" endtime="20231123 10:24:14.890"/>
+</kw>
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${options_logout.inc_logout}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:24:15.011" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745855007.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:14.890" endtime="20231123 10:24:15.011"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${options_logout.inc_logout}</arg>
+<doc>Click</doc>
+<msg timestamp="20231123 10:24:15.787" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745855132.png'/&gt;
+[log] CLICK on L[148,652]@S(0) (558 msec)</msg>
+<status status="PASS" starttime="20231123 10:24:15.011" endtime="20231123 10:24:15.787"/>
+</kw>
+<status status="PASS" starttime="20231123 10:24:14.249" endtime="20231123 10:24:15.788"/>
+</kw>
+<kw name="Clique em sim" library="kws_logoutSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${options_logout.tela_deseja_realizar_logout}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:24:15.926" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745855912.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:15.788" endtime="20231123 10:24:15.927"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${TIMEOUT.MINIMAL}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231123 10:24:20.927" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231123 10:24:15.927" endtime="20231123 10:24:20.927"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${options_logout.btn_sim}</arg>
+<doc>Click</doc>
+<msg timestamp="20231123 10:24:21.714" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745861046.png'/&gt;
+[log] CLICK on L[860,651]@S(0) (570 msec)</msg>
+<status status="PASS" starttime="20231123 10:24:20.927" endtime="20231123 10:24:21.714"/>
+</kw>
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.telaLogin}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:24:22.183" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745862164.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:21.714" endtime="20231123 10:24:22.184"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.telaLogin}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:24:22.317" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745862306.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:22.184" endtime="20231123 10:24:22.317"/>
+</kw>
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:24:22.397" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745862353.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:22.317" endtime="20231123 10:24:22.397"/>
+</kw>
+<status status="PASS" starttime="20231123 10:24:15.788" endtime="20231123 10:24:22.397"/>
+</kw>
+<status status="PASS" starttime="20231123 10:24:14.126" endtime="20231123 10:24:22.397"/>
+</kw>
+<status status="PASS" starttime="20231123 10:23:48.806" endtime="20231123 10:24:22.397"/>
+</suite>
+<suite id="s1-s1-s2-s8" name="TC9 Validar descansar mouse em incone menuHamburger" source="c:\PROJETOS\TESTES\ROBOT\SmartPOS\test\features\2-Tela home\TC9_Validar_descansar_mouse_em_incone_menuHamburger.robot">
+<kw name="Iniciar o sistema" library="hooks" type="SETUP">
+<kw name="Carregar imagens do sistema" library="BaseImages">
+<for flavor="IN">
+<var>${dir}</var>
+<value>@{IMAGE_DIR}</value>
+<iter>
+<var name="${dir}">src\auto\images</var>
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>${dir}</arg>
+<doc>Add image path</doc>
+<status status="PASS" starttime="20231123 10:24:22.406" endtime="20231123 10:24:22.408"/>
+</kw>
+<status status="PASS" starttime="20231123 10:24:22.406" endtime="20231123 10:24:22.408"/>
+</iter>
+<iter>
+<var name="${dir}">src\auto\images\login</var>
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>${dir}</arg>
+<doc>Add image path</doc>
+<status status="PASS" starttime="20231123 10:24:22.408" endtime="20231123 10:24:22.410"/>
+</kw>
+<status status="PASS" starttime="20231123 10:24:22.408" endtime="20231123 10:24:22.410"/>
+</iter>
+<iter>
+<var name="${dir}">src\auto\images\home</var>
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>${dir}</arg>
+<doc>Add image path</doc>
+<status status="PASS" starttime="20231123 10:24:22.410" endtime="20231123 10:24:22.411"/>
+</kw>
+<status status="PASS" starttime="20231123 10:24:22.410" endtime="20231123 10:24:22.411"/>
+</iter>
+<iter>
+<var name="${dir}">src\auto\images\logout</var>
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>${dir}</arg>
+<doc>Add image path</doc>
+<status status="PASS" starttime="20231123 10:24:22.413" endtime="20231123 10:24:22.414"/>
+</kw>
+<status status="PASS" starttime="20231123 10:24:22.411" endtime="20231123 10:24:22.414"/>
+</iter>
+<status status="PASS" starttime="20231123 10:24:22.405" endtime="20231123 10:24:22.414"/>
+</for>
+<status status="PASS" starttime="20231123 10:24:22.405" endtime="20231123 10:24:22.414"/>
+</kw>
+<kw name="Executar sistema SmartPdv" library="hooks">
+<kw name="Open Application" library="SikuliLibrary">
+<arg>D://Netpos//SmartPdv//SmartPdv.exe</arg>
+<doc>Open application
+ To open app with parameters, refer:
+ https://sikulix-2014.readthedocs.io/en/latest/appclass.html#App.App</doc>
+<status status="PASS" starttime="20231123 10:24:22.414" endtime="20231123 10:24:22.444"/>
+</kw>
+<status status="PASS" starttime="20231123 10:24:22.414" endtime="20231123 10:24:22.444"/>
+</kw>
+<status status="PASS" starttime="20231123 10:24:22.405" endtime="20231123 10:24:22.444"/>
+</kw>
+<test id="s1-s1-s2-s8-t1" name="Cenário 01 - Validar descansar o mouse em um dos icones do menu hamburger minimizado" line="8">
+<kw name="Logar no sistema smartPOS" library="kws_validar_header_tela_home">
+<kw name="Estar na tela de Login" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.telaLogin}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:24:22.592" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745862572.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:22.445" endtime="20231123 10:24:22.593"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.telaLogin}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:24:22.724" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745862713.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:22.593" endtime="20231123 10:24:22.724"/>
+</kw>
+<status status="PASS" starttime="20231123 10:24:22.445" endtime="20231123 10:24:22.724"/>
+</kw>
+<status status="PASS" starttime="20231123 10:24:22.445" endtime="20231123 10:24:22.724"/>
+</kw>
+<kw name="No campo input E-mail adicionar o e-mail valido" library="kws_validar_header_tela_home">
+<kw name="No campo input email, digite um email válido" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.input_email}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:24:22.826" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745862824.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:22.725" endtime="20231123 10:24:22.826"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${option_telaLogin.input_email}</arg>
+<arg>${EMAIL}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20231123 10:24:26.173" level="INFO">Input Text:
+eduardograciebarra@gmail.com</msg>
+<msg timestamp="20231123 10:24:26.173" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745862932.png'/&gt;
+[log] CLICK on L[957,476]@S(0) (567 msec)
+[log]  TYPE "eduardograciebarra@gmail.com"</msg>
+<status status="PASS" starttime="20231123 10:24:22.826" endtime="20231123 10:24:26.173"/>
+</kw>
+<status status="PASS" starttime="20231123 10:24:22.725" endtime="20231123 10:24:26.173"/>
+</kw>
+<status status="PASS" starttime="20231123 10:24:22.725" endtime="20231123 10:24:26.173"/>
+</kw>
+<kw name="No campo input senha digitar uma senha valida" library="kws_validar_header_tela_home">
+<kw name="No campo inpuit senha, digite uma senha válida" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.input_password}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:24:26.296" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745866285.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:26.174" endtime="20231123 10:24:26.296"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${option_telaLogin.input_password}</arg>
+<arg>${SENHA}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20231123 10:24:27.815" level="INFO">Input Text:
+teste123</msg>
+<msg timestamp="20231123 10:24:27.815" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745866410.png'/&gt;
+[log] CLICK on L[957,558]@S(0) (560 msec)
+[log]  TYPE "teste123"</msg>
+<status status="PASS" starttime="20231123 10:24:26.296" endtime="20231123 10:24:27.815"/>
+</kw>
+<status status="PASS" starttime="20231123 10:24:26.174" endtime="20231123 10:24:27.815"/>
+</kw>
+<status status="PASS" starttime="20231123 10:24:26.174" endtime="20231123 10:24:27.815"/>
+</kw>
+<kw name="Clique no botão entrar" library="kws_validar_header_tela_home">
+<kw name="Clique no botao Entrar" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.btn_entrar}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:24:27.936" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745867926.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:27.816" endtime="20231123 10:24:27.936"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${option_telaLogin.btn_entrar}</arg>
+<doc>Click</doc>
+<msg timestamp="20231123 10:24:28.690" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745868038.png'/&gt;
+[log] CLICK on L[957,665]@S(0) (571 msec)</msg>
+<status status="PASS" starttime="20231123 10:24:27.936" endtime="20231123 10:24:28.690"/>
+</kw>
+<status status="PASS" starttime="20231123 10:24:27.816" endtime="20231123 10:24:28.690"/>
+</kw>
+<status status="PASS" starttime="20231123 10:24:27.816" endtime="20231123 10:24:28.690"/>
+</kw>
+<kw name="Verifico o menu hamburger da tela home" library="kws_validar_menu_hamburger_tela_home">
+<kw name="Ir para a tela Home" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaHome.telaHome}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:24:38.254" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745878170.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:28.690" endtime="20231123 10:24:38.254"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaHome.telaHome}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:24:38.510" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745878421.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:38.254" endtime="20231123 10:24:38.510"/>
+</kw>
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:24:38.633" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745878546.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:38.510" endtime="20231123 10:24:38.633"/>
+</kw>
+<status status="PASS" starttime="20231123 10:24:28.690" endtime="20231123 10:24:38.633"/>
+</kw>
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaHome.menuHamburger}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:24:38.780" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745878767.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:38.633" endtime="20231123 10:24:38.781"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaHome.menuHamburger}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:24:38.913" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745878908.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:38.781" endtime="20231123 10:24:38.914"/>
+</kw>
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:24:39.039" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745878953.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:38.914" endtime="20231123 10:24:39.039"/>
+</kw>
+<status status="PASS" starttime="20231123 10:24:28.690" endtime="20231123 10:24:39.039"/>
+</kw>
+<kw name="Clico no menu Hamburger" library="kws_Validar_minimizar_menu_hamburger">
+<kw name="Ir para a tela Home" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaHome.telaHome}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:24:39.295" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745879204.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:39.040" endtime="20231123 10:24:39.295"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaHome.telaHome}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:24:39.566" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745879483.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:39.295" endtime="20231123 10:24:39.566"/>
+</kw>
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:24:39.693" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745879606.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:39.566" endtime="20231123 10:24:39.693"/>
+</kw>
+<status status="PASS" starttime="20231123 10:24:39.039" endtime="20231123 10:24:39.693"/>
+</kw>
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaHome.inc_menu_hamburger}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:24:39.795" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745879794.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:39.693" endtime="20231123 10:24:39.795"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${option_telaHome.inc_menu_hamburger}</arg>
+<doc>Click</doc>
+<msg timestamp="20231123 10:24:40.559" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745879902.png'/&gt;
+[log] CLICK on L[31,29]@S(0) (570 msec)</msg>
+<status status="PASS" starttime="20231123 10:24:39.795" endtime="20231123 10:24:40.559"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaHome.menu_hamburger_minimizado}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:24:40.682" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745880671.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:40.559" endtime="20231123 10:24:40.682"/>
+</kw>
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:24:40.804" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745880718.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:40.683" endtime="20231123 10:24:40.804"/>
+</kw>
+<status status="PASS" starttime="20231123 10:24:39.039" endtime="20231123 10:24:40.804"/>
+</kw>
+<kw name="Descanso o mouse em cima de um dos ícones" library="kws_validar_descansar_mouse_em_incone_menuHamburger">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaHome.menu_hamburger_minimizado}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:24:40.909" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745880907.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:40.805" endtime="20231123 10:24:40.909"/>
+</kw>
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaHome.inc_pdv_menu_hamburger}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:24:41.018" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745881016.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:40.910" endtime="20231123 10:24:41.018"/>
+</kw>
+<kw name="Mouse Move" library="SikuliLibrary">
+<arg>${option_telaHome.inc_pdv_menu_hamburger}</arg>
+<doc>Mouse moveMove the mouse pointer to the target</doc>
+<msg timestamp="20231123 10:24:41.647" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745881125.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:41.018" endtime="20231123 10:24:41.647"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaHome.Descanso_mouse_incone_pdv}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:24:41.813" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745881805.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:41.647" endtime="20231123 10:24:41.815"/>
+</kw>
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:24:41.942" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745881851.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:41.815" endtime="20231123 10:24:41.942"/>
+</kw>
+<status status="PASS" starttime="20231123 10:24:40.804" endtime="20231123 10:24:41.943"/>
+</kw>
+<status status="PASS" starttime="20231123 10:24:22.445" endtime="20231123 10:24:41.943"/>
+</test>
+<kw name="Fechar o sistema" library="hooks" type="TEARDOWN">
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:24:42.069" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745881977.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:41.944" endtime="20231123 10:24:42.069"/>
+</kw>
+<kw name="Clique no botao de logout" library="kws_logoutSucesso">
+<kw name="Ir para a tela Home" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaHome.telaHome}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:24:51.323" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745891231.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:42.070" endtime="20231123 10:24:51.323"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaHome.telaHome}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:24:51.581" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745891495.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:51.323" endtime="20231123 10:24:51.581"/>
+</kw>
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:24:51.704" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745891621.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:51.581" endtime="20231123 10:24:51.704"/>
+</kw>
+<status status="PASS" starttime="20231123 10:24:42.070" endtime="20231123 10:24:51.704"/>
+</kw>
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${options_logout.inc_logout}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:24:52.504" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745892493.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:51.704" endtime="20231123 10:24:52.504"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${options_logout.inc_logout}</arg>
+<doc>Click</doc>
+<msg timestamp="20231123 10:24:53.285" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745892632.png'/&gt;
+[log] CLICK on L[148,652]@S(0) (555 msec)</msg>
+<status status="PASS" starttime="20231123 10:24:52.504" endtime="20231123 10:24:53.285"/>
+</kw>
+<status status="PASS" starttime="20231123 10:24:42.069" endtime="20231123 10:24:53.285"/>
+</kw>
+<kw name="Clique em sim" library="kws_logoutSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${options_logout.tela_deseja_realizar_logout}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:24:53.401" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745893395.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:53.286" endtime="20231123 10:24:53.401"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${TIMEOUT.MINIMAL}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231123 10:24:58.402" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231123 10:24:53.401" endtime="20231123 10:24:58.402"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${options_logout.btn_sim}</arg>
+<doc>Click</doc>
+<msg timestamp="20231123 10:24:59.173" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745898519.png'/&gt;
+[log] CLICK on L[860,651]@S(0) (554 msec)</msg>
+<status status="PASS" starttime="20231123 10:24:58.402" endtime="20231123 10:24:59.173"/>
+</kw>
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.telaLogin}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:24:59.639" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745899628.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:59.173" endtime="20231123 10:24:59.639"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.telaLogin}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:24:59.779" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745899768.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:59.639" endtime="20231123 10:24:59.779"/>
+</kw>
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:24:59.858" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745899814.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:59.779" endtime="20231123 10:24:59.858"/>
+</kw>
+<status status="PASS" starttime="20231123 10:24:53.286" endtime="20231123 10:24:59.858"/>
+</kw>
+<status status="PASS" starttime="20231123 10:24:41.944" endtime="20231123 10:24:59.858"/>
+</kw>
+<status status="PASS" starttime="20231123 10:24:22.399" endtime="20231123 10:24:59.858"/>
+</suite>
+<status status="PASS" starttime="20231123 10:20:45.223" endtime="20231123 10:24:59.859"/>
+</suite>
+<suite id="s1-s1-s3" name="3-Logout" source="c:\PROJETOS\TESTES\ROBOT\SmartPOS\test\features\3-Logout">
+<suite id="s1-s1-s3-s1" name="TC10 Logout sucesso" source="c:\PROJETOS\TESTES\ROBOT\SmartPOS\test\features\3-Logout\TC10_Logout_sucesso.robot">
+<kw name="Iniciar o sistema" library="hooks" type="SETUP">
+<kw name="Carregar imagens do sistema" library="BaseImages">
+<for flavor="IN">
+<var>${dir}</var>
+<value>@{IMAGE_DIR}</value>
+<iter>
+<var name="${dir}">src\auto\images</var>
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>${dir}</arg>
+<doc>Add image path</doc>
+<status status="PASS" starttime="20231123 10:24:59.869" endtime="20231123 10:24:59.873"/>
+</kw>
+<status status="PASS" starttime="20231123 10:24:59.869" endtime="20231123 10:24:59.873"/>
+</iter>
+<iter>
+<var name="${dir}">src\auto\images\login</var>
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>${dir}</arg>
+<doc>Add image path</doc>
+<status status="PASS" starttime="20231123 10:24:59.873" endtime="20231123 10:24:59.874"/>
+</kw>
+<status status="PASS" starttime="20231123 10:24:59.873" endtime="20231123 10:24:59.874"/>
+</iter>
+<iter>
+<var name="${dir}">src\auto\images\home</var>
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>${dir}</arg>
+<doc>Add image path</doc>
+<status status="PASS" starttime="20231123 10:24:59.875" endtime="20231123 10:24:59.876"/>
+</kw>
+<status status="PASS" starttime="20231123 10:24:59.874" endtime="20231123 10:24:59.876"/>
+</iter>
+<iter>
+<var name="${dir}">src\auto\images\logout</var>
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>${dir}</arg>
+<doc>Add image path</doc>
+<status status="PASS" starttime="20231123 10:24:59.876" endtime="20231123 10:24:59.878"/>
+</kw>
+<status status="PASS" starttime="20231123 10:24:59.876" endtime="20231123 10:24:59.878"/>
+</iter>
+<status status="PASS" starttime="20231123 10:24:59.869" endtime="20231123 10:24:59.878"/>
+</for>
+<status status="PASS" starttime="20231123 10:24:59.868" endtime="20231123 10:24:59.878"/>
+</kw>
+<kw name="Executar sistema SmartPdv" library="hooks">
+<kw name="Open Application" library="SikuliLibrary">
+<arg>D://Netpos//SmartPdv//SmartPdv.exe</arg>
+<doc>Open application
+ To open app with parameters, refer:
+ https://sikulix-2014.readthedocs.io/en/latest/appclass.html#App.App</doc>
+<status status="PASS" starttime="20231123 10:24:59.878" endtime="20231123 10:24:59.908"/>
+</kw>
+<status status="PASS" starttime="20231123 10:24:59.878" endtime="20231123 10:24:59.908"/>
+</kw>
+<status status="PASS" starttime="20231123 10:24:59.868" endtime="20231123 10:24:59.908"/>
+</kw>
+<test id="s1-s1-s3-s1-t1" name="Cenário 01-Logout com sucesso" line="8">
+<kw name="Logar no sistema smartPOS" library="kws_validar_header_tela_home">
+<kw name="Estar na tela de Login" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.telaLogin}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:25:00.054" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745900034.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:24:59.909" endtime="20231123 10:25:00.054"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.telaLogin}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:25:00.188" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745900176.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:25:00.054" endtime="20231123 10:25:00.188"/>
+</kw>
+<status status="PASS" starttime="20231123 10:24:59.909" endtime="20231123 10:25:00.188"/>
+</kw>
+<status status="PASS" starttime="20231123 10:24:59.909" endtime="20231123 10:25:00.188"/>
+</kw>
+<kw name="No campo input E-mail adicionar o e-mail valido" library="kws_validar_header_tela_home">
+<kw name="No campo input email, digite um email válido" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.input_email}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:25:00.304" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745900302.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:25:00.189" endtime="20231123 10:25:00.304"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${option_telaLogin.input_email}</arg>
+<arg>${EMAIL}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20231123 10:25:03.654" level="INFO">Input Text:
+eduardograciebarra@gmail.com</msg>
+<msg timestamp="20231123 10:25:03.654" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745900410.png'/&gt;
+[log] CLICK on L[957,476]@S(0) (559 msec)
+[log]  TYPE "eduardograciebarra@gmail.com"</msg>
+<status status="PASS" starttime="20231123 10:25:00.304" endtime="20231123 10:25:03.654"/>
+</kw>
+<status status="PASS" starttime="20231123 10:25:00.189" endtime="20231123 10:25:03.654"/>
+</kw>
+<status status="PASS" starttime="20231123 10:25:00.188" endtime="20231123 10:25:03.654"/>
+</kw>
+<kw name="No campo input senha digitar uma senha valida" library="kws_validar_header_tela_home">
+<kw name="No campo inpuit senha, digite uma senha válida" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.input_password}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:25:03.775" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745903764.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:25:03.655" endtime="20231123 10:25:03.775"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${option_telaLogin.input_password}</arg>
+<arg>${SENHA}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20231123 10:25:05.293" level="INFO">Input Text:
+teste123</msg>
+<msg timestamp="20231123 10:25:05.293" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745903889.png'/&gt;
+[log] CLICK on L[957,558]@S(0) (556 msec)
+[log]  TYPE "teste123"</msg>
+<status status="PASS" starttime="20231123 10:25:03.775" endtime="20231123 10:25:05.294"/>
+</kw>
+<status status="PASS" starttime="20231123 10:25:03.655" endtime="20231123 10:25:05.294"/>
+</kw>
+<status status="PASS" starttime="20231123 10:25:03.655" endtime="20231123 10:25:05.294"/>
+</kw>
+<kw name="Clique no botão entrar" library="kws_validar_header_tela_home">
+<kw name="Clique no botao Entrar" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.btn_entrar}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:25:05.406" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745905404.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:25:05.294" endtime="20231123 10:25:05.406"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${option_telaLogin.btn_entrar}</arg>
+<doc>Click</doc>
+<msg timestamp="20231123 10:25:06.151" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745905513.png'/&gt;
+[log] CLICK on L[957,665]@S(0) (555 msec)</msg>
+<status status="PASS" starttime="20231123 10:25:05.406" endtime="20231123 10:25:06.151"/>
+</kw>
+<status status="PASS" starttime="20231123 10:25:05.294" endtime="20231123 10:25:06.152"/>
+</kw>
+<status status="PASS" starttime="20231123 10:25:05.294" endtime="20231123 10:25:06.152"/>
+</kw>
+<kw name="Ir para a tela Home" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaHome.telaHome}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:25:15.713" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745915665.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:25:06.152" endtime="20231123 10:25:15.714"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaHome.telaHome}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:25:15.984" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745915883.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:25:15.714" endtime="20231123 10:25:15.984"/>
+</kw>
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:25:16.113" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745916023.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:25:15.984" endtime="20231123 10:25:16.113"/>
+</kw>
+<status status="PASS" starttime="20231123 10:25:06.152" endtime="20231123 10:25:16.113"/>
+</kw>
+<kw name="Clique no botao de logout" library="kws_logoutSucesso">
+<kw name="Ir para a tela Home" library="kws_loginSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaHome.telaHome}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:25:16.376" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745916291.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:25:16.113" endtime="20231123 10:25:16.376"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaHome.telaHome}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:25:16.639" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745916556.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:25:16.376" endtime="20231123 10:25:16.639"/>
+</kw>
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:25:16.771" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745916681.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:25:16.639" endtime="20231123 10:25:16.771"/>
+</kw>
+<status status="PASS" starttime="20231123 10:25:16.113" endtime="20231123 10:25:16.771"/>
+</kw>
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${options_logout.inc_logout}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:25:16.901" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745916899.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:25:16.771" endtime="20231123 10:25:16.902"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${options_logout.inc_logout}</arg>
+<doc>Click</doc>
+<msg timestamp="20231123 10:25:17.693" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745917022.png'/&gt;
+[log] CLICK on L[148,652]@S(0) (565 msec)</msg>
+<status status="PASS" starttime="20231123 10:25:16.902" endtime="20231123 10:25:17.693"/>
+</kw>
+<status status="PASS" starttime="20231123 10:25:16.113" endtime="20231123 10:25:17.694"/>
+</kw>
+<kw name="Clique em sim" library="kws_logoutSucesso">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${options_logout.tela_deseja_realizar_logout}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:25:17.823" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745917817.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:25:17.694" endtime="20231123 10:25:17.823"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${TIMEOUT.MINIMAL}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231123 10:25:22.824" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231123 10:25:17.823" endtime="20231123 10:25:22.824"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${options_logout.btn_sim}</arg>
+<doc>Click</doc>
+<msg timestamp="20231123 10:25:23.625" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745922955.png'/&gt;
+[log] CLICK on L[860,651]@S(0) (562 msec)</msg>
+<status status="PASS" starttime="20231123 10:25:22.824" endtime="20231123 10:25:23.625"/>
+</kw>
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.telaLogin}</arg>
+<arg>${TIMEOUT.DEFAULT}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20231123 10:25:24.095" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745924077.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:25:23.625" endtime="20231123 10:25:24.095"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${option_telaLogin.telaLogin}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20231123 10:25:24.249" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745924233.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:25:24.095" endtime="20231123 10:25:24.249"/>
+</kw>
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20231123 10:25:24.355" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1700745924279.png'/&gt;</msg>
+<status status="PASS" starttime="20231123 10:25:24.249" endtime="20231123 10:25:24.355"/>
+</kw>
+<status status="PASS" starttime="20231123 10:25:17.694" endtime="20231123 10:25:24.355"/>
+</kw>
+<status status="PASS" starttime="20231123 10:24:59.908" endtime="20231123 10:25:24.355"/>
+</test>
+<status status="PASS" starttime="20231123 10:24:59.862" endtime="20231123 10:25:24.356"/>
+</suite>
+<status status="PASS" starttime="20231123 10:24:59.860" endtime="20231123 10:25:24.356"/>
+</suite>
+<status status="PASS" starttime="20231123 10:20:16.893" endtime="20231123 10:25:24.357"/>
+</suite>
+<status status="PASS" starttime="20231123 10:20:16.883" endtime="20231123 10:25:24.358"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="10" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="TC8 Validar maximizar menu hamburger">TC8 Validar maximizar menu hamburger</stat>
+<stat pass="10" fail="0" skip="0" id="s1" name="Test">Test</stat>
+<stat pass="10" fail="0" skip="0" id="s1-s1" name="Features">Test.Features</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="1-Tela login">Test.Features.1-Tela login</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="TC1 login sucesso">Test.Features.1-Tela login.TC1 login sucesso</stat>
+<stat pass="8" fail="0" skip="0" id="s1-s1-s2" name="2-Tela home">Test.Features.2-Tela home</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s2-s1" name="TC2 Validar Header Tela Home">Test.Features.2-Tela home.TC2 Validar Header Tela Home</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s2-s2" name="TC3 Validar Menu Hamburger Tela Home">Test.Features.2-Tela home.TC3 Validar Menu Hamburger Tela Home</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s2-s3" name="TC4 Validar Banner Tela Home">Test.Features.2-Tela home.TC4 Validar Banner Tela Home</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s2-s4" name="TC5 validar botao AGORA NAO Tela Home">Test.Features.2-Tela home.TC5 validar botao AGORA NAO Tela Home</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s2-s5" name="TC6 Validar botao CONFIRA Tela Home">Test.Features.2-Tela home.TC6 Validar botao CONFIRA Tela Home</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s2-s6" name="TC7 Validar minimizar menu hamburger">Test.Features.2-Tela home.TC7 Validar minimizar menu hamburger</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s2-s7" name="TC8 Validar maximizar menu hamburger">Test.Features.2-Tela home.TC8 Validar maximizar menu hamburger</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s2-s8" name="TC9 Validar descansar mouse em incone menuHamburger">Test.Features.2-Tela home.TC9 Validar descansar mouse em incone menuHamburger</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s3" name="3-Logout">Test.Features.3-Logout</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s3-s1" name="TC10 Logout sucesso">Test.Features.3-Logout.TC10 Logout sucesso</stat>
 </suite>
 </statistics>
 <errors>

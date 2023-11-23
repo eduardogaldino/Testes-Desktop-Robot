@@ -2,7 +2,7 @@
 Resource        ../../../src/config/main.resource
 
 Suite Setup     Iniciar o sistema 
-
+Suite Teardown  Fechar o sistema 
 
 *** Test Cases ***
 Cenário 01 - Validar botâo AGORA NAO do banner da tela home
