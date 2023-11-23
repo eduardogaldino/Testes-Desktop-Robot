@@ -14,3 +14,6 @@ Executar sistema SmartPdv
 Iniciar o sistema
     Carregar imagens do sistema
     Executar sistema SmartPdv
+
+Fechar o sistema
+    Close Application             SmartPdv

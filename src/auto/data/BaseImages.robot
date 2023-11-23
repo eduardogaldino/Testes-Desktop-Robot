@@ -4,7 +4,7 @@ Resource     ../../config/main.resource
 
 *** Variables ***
 @{IMAGE_DIR}        
-...            src//auto//images
+...            src\\auto\\images
 ...            src\\auto\\images\\login
 ...            src\\auto\\images\\home 
 
