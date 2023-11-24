@@ -1,6 +1,0 @@
-Exception in thread "Thread-14" java.lang.NullPointerException: Cannot read the array length because "entries" is null
-	at org.sikuli.basics.FileManager.doDeleteFileOrFolder(FileManager.java:485)
-	at org.sikuli.basics.FileManager.deleteFileOrFolder(FileManager.java:467)
-	at org.sikuli.script.support.RunTime.runShutdownHook(RunTime.java:1390)
-	at org.sikuli.script.support.RunTime.access$000(RunTime.java:42)
-	at org.sikuli.script.support.RunTime$3.run(RunTime.java:1056)

@@ -16,6 +16,5 @@ Iniciar o sistema
     Executar sistema SmartPdv
 
 Fechar o sistema
-    Capture Screen
-    Clique no botao de logout
-    Clique em sim
+    Teste fechar plano
+    Deslogar com menu hamburger minimizado
